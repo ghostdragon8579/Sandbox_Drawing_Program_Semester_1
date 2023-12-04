@@ -2,6 +2,8 @@
 PImage QuitButton;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
+float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
+float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 int appWidth, appHeight;
 int size;
 //
@@ -30,6 +32,16 @@ void setup() {
   widthRectQuit = appWidth*1/12;
   heightRectQuit = appHeight*1/8;
   //
+  xColorSelection = appWidth*1/30;
+  yColorSelection = appHeight*1/11;
+  widthColorSelection = appWidth*2/21;
+  heightColorSelection = appHeight*1/3;
+  //
+  xWidthSelection = appWidth*1/30;
+  yWidthSelection = appHeight*6/11;
+  widthWidthSelection = appWidth*2/21;
+  heightWidthSelection = appHeight*1/3;
+  //
 } //End setup
 //
 void draw() {
@@ -37,6 +49,8 @@ void draw() {
   rect(xRectBackground, yRectBackground, widthRectBackground, heightRectBackground);
   rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
+  rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
+  rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   //
 } //End draw
 //
