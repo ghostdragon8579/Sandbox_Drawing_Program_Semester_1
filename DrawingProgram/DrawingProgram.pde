@@ -1,5 +1,6 @@
 //Global Variables
 PImage QuitButton;
+color ResetDefaultInk=#FFFFFF;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
@@ -42,11 +43,20 @@ void setup() {
   widthWidthSelection = appWidth*2/21;
   heightWidthSelection = appHeight*1/3;
   //
+  rect(xRectBackground, yRectBackground, widthRectBackground, heightRectBackground);
+  //
 } //End setup
 //
 void draw() {
   //
-  rect(xRectBackground, yRectBackground, widthRectBackground, heightRectBackground);
+  if(mouseButton == LEFT){
+    fill(#C4C4C4);
+    noStroke();
+    if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
+    rect(mouseX-15, mouseY-15, 30, 30);
+    fill(ResetDefaultInk);
+  }
+  stroke(1);
   rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
