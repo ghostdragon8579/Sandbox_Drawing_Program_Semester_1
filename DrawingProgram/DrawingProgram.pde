@@ -57,6 +57,13 @@ void draw() {
     rect(mouseX-15, mouseY-15, 30, 30);
     fill(ResetDefaultInk);
   }
+  if(mouseButton == RIGHT){
+    fill(ResetDefaultInk);
+    noStroke();
+    if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
+    rect(mouseX-45, mouseY-45, 90, 90);
+    fill(ResetDefaultInk);
+  }
   stroke(1);
   rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
