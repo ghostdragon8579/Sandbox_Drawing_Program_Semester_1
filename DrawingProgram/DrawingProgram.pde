@@ -1,6 +1,7 @@
 //Global Variables
 PImage QuitButton;
 color ResetDefaultInk=#FFFFFF;
+color DrawingColor;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
