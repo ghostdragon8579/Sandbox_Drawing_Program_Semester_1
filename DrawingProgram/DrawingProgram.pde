@@ -4,6 +4,8 @@ color ResetDefaultInk=#FFFFFF;
 color DrawingColor;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
+float xNoDrawZone1, yNoDrawZone1, widthNoDrawZone1, heightNoDrawZone1;
+float xNoDrawZone2, yNoDrawZone2, widthNoDrawZone2, heightNoDrawZone2;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 int appWidth, appHeight;
