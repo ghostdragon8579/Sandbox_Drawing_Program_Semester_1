@@ -1,7 +1,7 @@
 //Global Variables
 PImage QuitButton;
 color ResetDefaultInk=#FFFFFF;
-color Blue;
+color Blue=#0C11E8;
 color Green;
 color Red;
 color Yellow;
@@ -9,7 +9,7 @@ color Purple;
 color Magenta;
 color Orange;
 color Black;
-color DrawingColor;
+color DrawingColor=#C4C4C4;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
 float xNoDrawZone1, yNoDrawZone1, widthNoDrawZone1, heightNoDrawZone1;
@@ -72,9 +72,9 @@ void setup() {
 void draw() {
   //
   if(mouseButton == LEFT){
-    fill(#C4C4C4);
     noStroke();
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
+    fill(DrawingColor);
     rect(mouseX-15, mouseY-15, 30, 30);
     fill(ResetDefaultInk);
   }
@@ -95,7 +95,11 @@ void draw() {
   //
 } //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+  //
+  if(key=='F' || key=='f') DrawingColor=Blue;
+  //
+} //End keyPressed
 //
 void mousePressed() {
   //
