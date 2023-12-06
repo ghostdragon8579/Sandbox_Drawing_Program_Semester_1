@@ -1,6 +1,14 @@
 //Global Variables
 PImage QuitButton;
 color ResetDefaultInk=#FFFFFF;
+color Blue;
+color Green;
+color Red;
+color Yellow;
+color Purple;
+color Magenta;
+color Orange;
+color Black;
 color DrawingColor;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
@@ -46,6 +54,17 @@ void setup() {
   widthWidthSelection = appWidth*2/21;
   heightWidthSelection = appHeight*1/3;
   //
+  xNoDrawZone1 = appWidth*1/1000;
+  yNoDrawZone1 = yRectBackground;
+  widthNoDrawZone1 = appWidth*1/6;
+  heightNoDrawZone1 = heightRectBackground;
+  //
+  xNoDrawZone2 = appWidth*5/6;
+  yNoDrawZone2 = yRectBackground;
+  widthNoDrawZone2 = appWidth*1/6;
+  heightNoDrawZone2 = heightRectBackground;
+  //
+  noStroke();
   rect(xRectBackground, yRectBackground, widthRectBackground, heightRectBackground);
   //
 } //End setup
@@ -67,6 +86,8 @@ void draw() {
     fill(ResetDefaultInk);
   }
   stroke(1);
+  rect(xNoDrawZone1, yNoDrawZone1, widthNoDrawZone1, heightNoDrawZone1);
+  rect(xNoDrawZone2, yNoDrawZone2, widthNoDrawZone2, heightNoDrawZone2);
   rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
