@@ -33,6 +33,8 @@ float xRed, yRed, widthRed, heightRed;
 float xYellow, yYellow, widthYellow, heightYellow;
 float xCyan, yCyan, widthCyan, heightCyan;
 float xPurple, yPurple, widthPurple, heightPurple;
+float xBrown, yBrown, widthBrown, heightBrown;
+float xMagenta, yMagenta, widthMagenta, heightMagenta;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 int appWidth, appHeight;
@@ -109,6 +111,26 @@ void setup() {
   widthYellow = widthRed;
   heightYellow = heightRed;
   //
+  xCyan = appWidth*1/25;
+  yCyan = appHeight*4/20;
+  widthCyan = appWidth*2/70;
+  heightCyan = appHeight*3/70;
+  //
+  xPurple = appWidth*1/11;
+  yPurple = appHeight*4/20;
+  widthPurple = appWidth*2/70;
+  heightPurple = appHeight*3/70;
+  //
+  xBrown = appWidth*1/25;
+  yBrown = appHeight*5/20;
+  widthBrown = appWidth*2/70;
+  heightBrown = appHeight*3/70;
+  //
+  xMagenta = appWidth*1/11;
+  yMagenta = appHeight*5/20;
+  widthMagenta = appWidth*2/70;
+  heightMagenta = appHeight*3/70;
+  //
   xWidthSelection = appWidth*1/30;
   yWidthSelection = appHeight*6/11;
   widthWidthSelection = appWidth*2/21;
@@ -162,6 +184,14 @@ void draw() {
   rect(xRed, yRed, widthRed, heightRed);
   fill(Yellow);
   rect(xYellow, yYellow, widthYellow, heightYellow);
+  fill(Cyan);
+  rect(xCyan, yCyan, widthCyan, heightCyan);
+  fill(Purple);
+  rect(xPurple, yPurple, widthPurple, heightPurple);
+  fill(Brown);
+  rect(xBrown, yBrown, widthBrown, heightBrown);
+  fill(Magenta);
+  rect(xMagenta, yMagenta, widthMagenta, heightMagenta);
   fill(Gray);
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(ResetDefaultInk);
@@ -182,6 +212,10 @@ void mousePressed() {
   if (mouseX>xGreen && mouseX<xGreen+widthGreen && mouseY>yGreen && mouseY<yGreen+heightGreen) DrawingColor=Green;
   if (mouseX>xRed && mouseX<xRed+widthRed && mouseY>yRed && mouseY<yRed+heightRed) DrawingColor=Red;
   if (mouseX>xYellow && mouseX<xYellow+widthYellow && mouseY>yYellow && mouseY<yYellow+heightYellow) DrawingColor=Yellow;
+  if (mouseX>xCyan && mouseX<xCyan+widthCyan && mouseY>yCyan && mouseY<yCyan+heightCyan) DrawingColor=Cyan;
+  if (mouseX>xPurple && mouseX<xPurple+widthPurple && mouseY>yPurple && mouseY<yPurple+heightPurple) DrawingColor=Purple;
+  if (mouseX>xBrown && mouseX<xBrown+widthBrown && mouseY>yBrown && mouseY<yBrown+heightBrown) DrawingColor=Brown;
+  if (mouseX>xMagenta && mouseX<xMagenta+widthMagenta && mouseY>yMagenta && mouseY<yMagenta+heightMagenta) DrawingColor=Magenta;
   //
 } //End mousePressed
 //
