@@ -1,19 +1,25 @@
 //Global Variables
 PImage QuitButton;
 color ResetDefaultInk=#FFFFFF;
-color Blue=#0C11E8;
-color Green;
-color Red;
-color Yellow;
-color Purple;
-color Magenta;
-color Orange;
-color Black;
-color DrawingColor=#C4C4C4;
+color Blue=#0004C4;
+color Green=#00C41F;
+color Red=#E5074A;
+color Yellow=#FAE603;
+color Cyan=#03FACA;
+color Purple=#8906D1;
+color Brown=#986005;
+color Magenta=#E507C1;
+color Orange=#F5BC00;
+color Black=#000000;
+color DrawingColor=#000000;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
 float xNoDrawZone1, yNoDrawZone1, widthNoDrawZone1, heightNoDrawZone1;
 float xNoDrawZone2, yNoDrawZone2, widthNoDrawZone2, heightNoDrawZone2;
+float xBlue, yBlue, widthBlue, heightBlue;
+float xGreen, yGreen, widthGreen, heightGreen;
+float xRed, yRed, widthRed, heightRed;
+float xYellow, yYellow, widthYellow, heightYellow;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 int appWidth, appHeight;
@@ -48,6 +54,21 @@ void setup() {
   yColorSelection = appHeight*1/11;
   widthColorSelection = appWidth*2/21;
   heightColorSelection = appHeight*1/3;
+  //
+  xBlue = appWidth*1/25;
+  yBlue = appHeight*1/10;
+  widthBlue = appWidth*2/70;
+  heightBlue = appHeight*3/70;
+  //
+  xGreen = appWidth*1/11;
+  yGreen = appHeight*1/10;
+  widthGreen = appWidth*2/70;
+  heightGreen = appHeight*3/70;
+  //
+  xRed = appWidth*1/25;
+  yRed = appHeight*3/20; 
+  widthRed = appWidth*2/70;
+  heightRed = appHeight*3/70;
   //
   xWidthSelection = appWidth*1/30;
   yWidthSelection = appHeight*6/11;
@@ -91,19 +112,27 @@ void draw() {
   rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
+  fill(Blue);
+  rect(xBlue, yBlue, widthBlue, heightBlue);
+  fill(Green);
+  rect(xGreen, yGreen, widthGreen, heightGreen);
+  fill(Red);
+  rect(xRed, yRed, widthRed, heightRed);
+  fill(ResetDefaultInk);
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   //
 } //End draw
 //
 void keyPressed() {
   //
-  if(key=='F' || key=='f') DrawingColor=Blue;
-  //
 } //End keyPressed
 //
 void mousePressed() {
   //
   if (mouseX>xRectQuit && mouseX<xRectQuit+widthRectQuit && mouseY>yRectQuit && mouseY<yRectQuit+heightRectQuit) exit();
+  if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue) DrawingColor=Blue;
+  if (mouseX>xGreen && mouseX<xGreen+widthGreen && mouseY>yGreen && mouseY<yGreen+heightGreen) DrawingColor=Green;
+  if (mouseX>xRed && mouseX<xRed+widthRed && mouseY>yRed && mouseY<yRed+heightRed) DrawingColor=Red;
   //
 } //End mousePressed
 //
