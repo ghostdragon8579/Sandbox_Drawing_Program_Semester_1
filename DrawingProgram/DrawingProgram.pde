@@ -3,8 +3,9 @@ PImage QuitButton;
 PFont QuestionFont;
 String Yes = "Yes";
 String No = "No";
+String Erase = "Erase all";
 String Question = "Are you sure you want to quit?";
-color Gray=#AFAFAF;
+String Question2 = "Are you sure you want to erase all?";
 color DarkGreen=#02B703;
 color DarkRed=#AA021B;
 color ResetDefaultInk=#FFFFFF;
@@ -16,7 +17,9 @@ color Cyan=#03FACA;
 color Purple=#8906D1;
 color Brown=#986005;
 color Magenta=#E507C1;
-color Orange=#F5BC00;
+color Orange=#FFA615;
+color Navy=#09629B;
+color Gray=#AFAFAF;
 color Black=#000000;
 color DrawingColor=#000000;
 float ConfirmationBackgroundx, ConfirmationBackgroundy, ConfirmationBackgroundwidth, ConfirmationBackgroundheight;
@@ -35,6 +38,8 @@ float xCyan, yCyan, widthCyan, heightCyan;
 float xPurple, yPurple, widthPurple, heightPurple;
 float xBrown, yBrown, widthBrown, heightBrown;
 float xMagenta, yMagenta, widthMagenta, heightMagenta;
+float xOrange, yOrange, widthOrange, heightOrange;
+float xNavy, yNavy, widthNavy, heightNavy;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 int appWidth, appHeight;
@@ -131,6 +136,11 @@ void setup() {
   widthMagenta = appWidth*2/70;
   heightMagenta = appHeight*3/70;
   //
+  xOrange = appWidth*1/25;
+  yOrange = appHeight*6/20; 
+  widthOrange = appWidth*2/70;
+  heightOrange = appHeight*3/70;
+  //
   xWidthSelection = appWidth*1/30;
   yWidthSelection = appHeight*6/11;
   widthWidthSelection = appWidth*2/21;
@@ -192,6 +202,8 @@ void draw() {
   rect(xBrown, yBrown, widthBrown, heightBrown);
   fill(Magenta);
   rect(xMagenta, yMagenta, widthMagenta, heightMagenta);
+  fill(Orange);
+  rect(xOrange, yOrange, widthOrange, heightOrange);
   fill(Gray);
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(ResetDefaultInk);
@@ -216,6 +228,7 @@ void mousePressed() {
   if (mouseX>xPurple && mouseX<xPurple+widthPurple && mouseY>yPurple && mouseY<yPurple+heightPurple) DrawingColor=Purple;
   if (mouseX>xBrown && mouseX<xBrown+widthBrown && mouseY>yBrown && mouseY<yBrown+heightBrown) DrawingColor=Brown;
   if (mouseX>xMagenta && mouseX<xMagenta+widthMagenta && mouseY>yMagenta && mouseY<yMagenta+heightMagenta) DrawingColor=Magenta;
+  if (mouseX>xOrange && mouseX<xOrange+widthOrange && mouseY>yOrange && mouseY<yOrange+heightOrange) DrawingColor=Orange;
   //
 } //End mousePressed
 //
