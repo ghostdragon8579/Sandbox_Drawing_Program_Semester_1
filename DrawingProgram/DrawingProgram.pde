@@ -1,5 +1,6 @@
 //Global Variables
 PImage QuitButton;
+PImage EraseButton;
 PFont QuestionFont;
 String Yes = "Yes";
 String No = "No";
@@ -55,7 +56,6 @@ float EraseVariable1, EraseVariable2;
 int appWidth, appHeight;
 int size;
 Boolean ExitConfirmation=false;
-Boolean Erasing=true;
 //
 void setup() {
   //
@@ -70,7 +70,9 @@ void setup() {
   String imagesPath = up + open + up + open;
   String Imagefolder = "Images";
   String QuitImage = "exet.png";
+  String EraserImage = "Eraser.png";
   QuitButton = loadImage(imagesPath + Imagefolder + open + QuitImage);
+  EraseButton = loadImage(imagesPath + Imagefolder + open + EraserImage);
   //
   xRectBackground = appWidth*1/6;
   yRectBackground = appHeight*0;
@@ -207,7 +209,6 @@ void draw() {
     rect(mouseX+DrawVariable1, mouseY+DrawVariable2, DrawVariable3, DrawVariable3);
     fill(ResetDefaultInk);
   }
-  //if(mouseButton == LEFT && Erasing==true){
   if(mouseButton == RIGHT){
     fill(ResetDefaultInk);
     noStroke();
@@ -222,7 +223,6 @@ void draw() {
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   fill(DarkGray);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
-  rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(Blue);
   rect(xBlue, yBlue, widthBlue, heightBlue);
   fill(Green);
@@ -249,6 +249,10 @@ void draw() {
   rect(xBlack, yBlack, widthBlack, heightBlack);
   fill(ResetDefaultInk);
   rect(xErase, yErase, widthErase, heightErase);
+  image(EraseButton, xErase, yErase, widthErase, heightErase);
+  fill(DarkGray);
+  rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
+  fill(ResetDefaultInk);
   //
 } //End draw
 //
@@ -274,14 +278,6 @@ void mousePressed() {
   if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy) DrawingColor=Navy;
   if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray) DrawingColor=Gray;
   if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack) DrawingColor=Black;
-  /*if (mouseX>xErase && mouseX<xErase+widthErase && mouseY>yErase && mouseY<yErase+heightErase); {
-    if ( Erasing==true ) {
-      Erasing = false;
-    } else {
-      Erasing = true;
-    }
-  }
-  */
   //
 } //End mousePressed
 //
