@@ -23,6 +23,7 @@ color Navy=#09629B;
 color Gray=#AFAFAF;
 color Black=#000000;
 color DrawingColor=#000000;
+color ErasingColor=ResetDefaultInk;
 float ConfirmationBackgroundx, ConfirmationBackgroundy, ConfirmationBackgroundwidth, ConfirmationBackgroundheight;
 float xConfirmationYes, yConfirmationYes, widthConfirmationYes, heightConfirmationYes;
 float xConfirmationNo, yConfirmationNo, widthConfirmationNo, heightConfirmationNo;
@@ -49,11 +50,12 @@ float xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1;
 float xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
-int DrawVariable1, DrawVariable2;
-int EraseVariable1, EraseVariable2;
+float DrawVariable1, DrawVariable2, DrawVariable3;
+float EraseVariable1, EraseVariable2;
 int appWidth, appHeight;
 int size;
 Boolean ExitConfirmation=false;
+Boolean Erasing=true;
 //
 void setup() {
   //
@@ -185,6 +187,10 @@ void setup() {
   widthNoDrawZone2 = appWidth*1/6;
   heightNoDrawZone2 = heightRectBackground;
   //
+  DrawVariable1 = -15;
+  DrawVariable2 = -15;
+  DrawVariable3 = 30;
+  //
   QuestionFont = createFont("Arial", 55);
   //
   noStroke();
@@ -198,9 +204,10 @@ void draw() {
     noStroke();
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
     fill(DrawingColor);
-    rect(mouseX-15, mouseY-15, 30, 30);
+    rect(mouseX+DrawVariable1, mouseY+DrawVariable2, DrawVariable3, DrawVariable3);
     fill(ResetDefaultInk);
   }
+  //if(mouseButton == LEFT && Erasing==true){
   if(mouseButton == RIGHT){
     fill(ResetDefaultInk);
     noStroke();
@@ -267,6 +274,14 @@ void mousePressed() {
   if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy) DrawingColor=Navy;
   if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray) DrawingColor=Gray;
   if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack) DrawingColor=Black;
+  /*if (mouseX>xErase && mouseX<xErase+widthErase && mouseY>yErase && mouseY<yErase+heightErase); {
+    if ( Erasing==true ) {
+      Erasing = false;
+    } else {
+      Erasing = true;
+    }
+  }
+  */
   //
 } //End mousePressed
 //
