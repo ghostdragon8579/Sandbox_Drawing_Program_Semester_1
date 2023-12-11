@@ -65,7 +65,7 @@ void setup() {
   //
   String open = "/";
   String up = "..";
-  String imagesPath = up + open + up + open + up + open;
+  String imagesPath = up + open + up + open;
   String Imagefolder = "Images";
   String QuitImage = "exet.png";
   QuitButton = loadImage(imagesPath + Imagefolder + open + QuitImage);
