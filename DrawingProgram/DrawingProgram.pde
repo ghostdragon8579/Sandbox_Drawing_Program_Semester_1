@@ -101,7 +101,7 @@ void setup() {
   heightRectQuit = appHeight*1/8;
   //
   xErase = appWidth*1/18;
-  yErase = appHeight*21/50;
+  yErase = appHeight*1/11+appHeight*5/16;
   widthErase = appWidth*1/21;
   heightErase = appHeight*1/13;
   //
