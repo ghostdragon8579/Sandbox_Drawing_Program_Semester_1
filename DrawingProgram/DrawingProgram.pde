@@ -6,6 +6,7 @@ String No = "No";
 String Erase = "Erase all";
 String Question = "Are you sure you want to quit?";
 String Question2 = "Are you sure you want to erase all?";
+color DarkGray=#5A5A5A;
 color DarkGreen=#02B703;
 color DarkRed=#AA021B;
 color ResetDefaultInk=#FFFFFF;
@@ -26,6 +27,7 @@ float ConfirmationBackgroundx, ConfirmationBackgroundy, ConfirmationBackgroundwi
 float xConfirmationYes, yConfirmationYes, widthConfirmationYes, heightConfirmationYes;
 float xConfirmationNo, yConfirmationNo, widthConfirmationNo, heightConfirmationNo;
 float xConfirmationQuestion, yConfirmationQuestion, widthConfirmationQuestion, heightConfirmationQuestion;
+float xWidth1, yWidth1, widthWidth1, heightWidth1;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
 float xNoDrawZone1, yNoDrawZone1, widthNoDrawZone1, heightNoDrawZone1;
@@ -40,8 +42,15 @@ float xBrown, yBrown, widthBrown, heightBrown;
 float xMagenta, yMagenta, widthMagenta, heightMagenta;
 float xOrange, yOrange, widthOrange, heightOrange;
 float xNavy, yNavy, widthNavy, heightNavy;
+float xGray, yGray, widthGray, heightGray;
+float xBlack, yBlack, widthBlack, heightBlack;
+float xErase, yErase, widthErase, heightErase;
+float xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1;
+float xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
+int DrawVariable1, DrawVariable2;
+int EraseVariable1, EraseVariable2;
 int appWidth, appHeight;
 int size;
 Boolean ExitConfirmation=false;
@@ -56,8 +65,8 @@ void setup() {
   //
   String open = "/";
   String up = "..";
-  String imagesPath = up + open;
-  String Imagefolder = "Images for the Celebration Card4";
+  String imagesPath = up + open + up + open + up + open;
+  String Imagefolder = "Images";
   String QuitImage = "exet.png";
   QuitButton = loadImage(imagesPath + Imagefolder + open + QuitImage);
   //
@@ -91,10 +100,15 @@ void setup() {
   widthRectQuit = appWidth*1/12;
   heightRectQuit = appHeight*1/8;
   //
+  xErase = appWidth*1/18;
+  yErase = appHeight*21/50;
+  widthErase = appWidth*1/21;
+  heightErase = appHeight*1/13;
+  //
   xColorSelection = appWidth*1/30;
   yColorSelection = appHeight*1/11;
   widthColorSelection = appWidth*2/21;
-  heightColorSelection = appHeight*1/3;
+  heightColorSelection = appHeight*5/16;
   //
   xBlue = appWidth*1/25;
   yBlue = appHeight*1/10;
@@ -137,14 +151,29 @@ void setup() {
   heightMagenta = appHeight*3/70;
   //
   xOrange = appWidth*1/25;
-  yOrange = appHeight*6/20; 
+  yOrange = appHeight*6/20;
   widthOrange = appWidth*2/70;
   heightOrange = appHeight*3/70;
+  //
+  xNavy = appWidth*1/11;
+  yNavy = appHeight*6/20;
+  widthNavy = appWidth*2/70;
+  heightNavy = appHeight*3/70;
+  //
+  xGray = appWidth*1/25;
+  yGray = appHeight*7/20;
+  widthGray = appWidth*2/70;
+  heightGray = appHeight*3/70;
+  //
+  xBlack = appWidth*1/11;
+  yBlack = appHeight*7/20;
+  widthBlack = appWidth*2/70;
+  heightBlack = appHeight*3/70;
   //
   xWidthSelection = appWidth*1/30;
   yWidthSelection = appHeight*6/11;
   widthWidthSelection = appWidth*2/21;
-  heightWidthSelection = appHeight*1/3;
+  heightWidthSelection = appHeight*5/16;
   //
   xNoDrawZone1 = appWidth*1/1000;
   yNoDrawZone1 = yRectBackground;
@@ -184,8 +213,9 @@ void draw() {
   rect(xNoDrawZone2, yNoDrawZone2, widthNoDrawZone2, heightNoDrawZone2);
   rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
-  fill(Gray);
+  fill(DarkGray);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
+  rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(Blue);
   rect(xBlue, yBlue, widthBlue, heightBlue);
   fill(Green);
@@ -204,9 +234,14 @@ void draw() {
   rect(xMagenta, yMagenta, widthMagenta, heightMagenta);
   fill(Orange);
   rect(xOrange, yOrange, widthOrange, heightOrange);
+  fill(Navy);
+  rect(xNavy, yNavy, widthNavy, heightNavy);
   fill(Gray);
-  rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
+  rect(xGray, yGray, widthGray, heightGray);
+  fill(Black);
+  rect(xBlack, yBlack, widthBlack, heightBlack);
   fill(ResetDefaultInk);
+  rect(xErase, yErase, widthErase, heightErase);
   //
 } //End draw
 //
@@ -229,6 +264,9 @@ void mousePressed() {
   if (mouseX>xBrown && mouseX<xBrown+widthBrown && mouseY>yBrown && mouseY<yBrown+heightBrown) DrawingColor=Brown;
   if (mouseX>xMagenta && mouseX<xMagenta+widthMagenta && mouseY>yMagenta && mouseY<yMagenta+heightMagenta) DrawingColor=Magenta;
   if (mouseX>xOrange && mouseX<xOrange+widthOrange && mouseY>yOrange && mouseY<yOrange+heightOrange) DrawingColor=Orange;
+  if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy) DrawingColor=Navy;
+  if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray) DrawingColor=Gray;
+  if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack) DrawingColor=Black;
   //
 } //End mousePressed
 //
