@@ -179,6 +179,11 @@ void setup() {
   widthWidthSelection = appWidth*2/21;
   heightWidthSelection = appHeight*5/16;
   //
+  xDrawSize1 = appWidth*1/25;
+  yDrawSize1 = appHeight*28/50;
+  widthDrawSize1 = appWidth*6/75;
+  heightDrawSize1 = appHeight*3/70;
+  //
   xNoDrawZone1 = appWidth*1/1000;
   yNoDrawZone1 = yRectBackground;
   widthNoDrawZone1 = appWidth*1/6;
@@ -253,6 +258,7 @@ void draw() {
   fill(DarkGray);
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(ResetDefaultInk);
+  rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1);
   //
 } //End draw
 //
