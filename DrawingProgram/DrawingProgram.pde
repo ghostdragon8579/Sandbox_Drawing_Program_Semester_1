@@ -49,6 +49,9 @@ float xBlack, yBlack, widthBlack, heightBlack;
 float xErase, yErase, widthErase, heightErase;
 float xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1;
 float xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2;
+float xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3;
+float xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4;
+float xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 float DrawVariable1, DrawVariable2, DrawVariable3;
@@ -189,6 +192,21 @@ void setup() {
   widthDrawSize2 = appWidth*6/75;
   heightDrawSize2 = appHeight*5/80;
   //
+  xDrawSize3 = appWidth*1/25;
+  yDrawSize3 = appHeight*57/80;
+  widthDrawSize3 = appWidth*6/75;
+  heightDrawSize3 = appHeight*4/80;
+  //
+  xDrawSize4 = appWidth*1/25;
+  yDrawSize4 = appHeight*77/100;
+  widthDrawSize4 = appWidth*6/75;
+  heightDrawSize4 = appHeight*3/80;
+  //
+  xDrawSize5 = appWidth*1/25;
+  yDrawSize5 = appHeight*163/200;
+  widthDrawSize5 = appWidth*6/75;
+  heightDrawSize5 = appHeight*2/80;
+  //
   xNoDrawZone1 = appWidth*1/1000;
   yNoDrawZone1 = yRectBackground;
   widthNoDrawZone1 = appWidth*1/6;
@@ -266,6 +284,9 @@ void draw() {
   fill(ResetDefaultInk);
   rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1);
   rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
+  rect(xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3);
+  rect(xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4);
+  rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
   //if (ExitConfirmation==true) ExitConfirmation();
   //
 } //End draw
@@ -292,6 +313,7 @@ void mousePressed() {
   if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy) DrawingColor=Navy;
   if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray) DrawingColor=Gray;
   if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack) DrawingColor=Black;
+  if (mouseX>xErase && mouseX<xErase+widthErase && mouseY>yErase && mouseY<yErase+heightErase) DrawingColor=ErasingColor;
   //
   if (mouseX>xDrawSize1 && mouseX<xDrawSize1+widthDrawSize1 && mouseY>yDrawSize1 && mouseY<yDrawSize1+heightDrawSize1) {
     DrawVariable1 = -45;
@@ -302,6 +324,21 @@ void mousePressed() {
     DrawVariable1 = -30;
     DrawVariable2 = -30;
     DrawVariable3 = 60;
+  }
+  if (mouseX>xDrawSize3 && mouseX<xDrawSize3+widthDrawSize3 && mouseY>yDrawSize3 && mouseY<yDrawSize3+heightDrawSize3) {
+    DrawVariable1 = -15;
+    DrawVariable2 = -15;
+    DrawVariable3 = 30;
+  }
+  if (mouseX>xDrawSize4 && mouseX<xDrawSize4+widthDrawSize4 && mouseY>yDrawSize4 && mouseY<yDrawSize4+heightDrawSize4) {
+    DrawVariable1 = -10;
+    DrawVariable2 = -10;
+    DrawVariable3 = 20;
+  }
+  if (mouseX>xDrawSize5 && mouseX<xDrawSize5+widthDrawSize5 && mouseY>yDrawSize5 && mouseY<yDrawSize5+heightDrawSize5) {
+    DrawVariable1 = -5;
+    DrawVariable2 = -5;
+    DrawVariable3 = 10;
   }
   //
 } //End mousePressed
