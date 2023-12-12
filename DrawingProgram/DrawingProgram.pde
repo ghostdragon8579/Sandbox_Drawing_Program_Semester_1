@@ -185,9 +185,9 @@ void setup() {
   heightDrawSize1 = appHeight*6/80;
   //
   xDrawSize2 = appWidth*1/25;
-  yDrawSize2 = appHeight*44/70;
+  yDrawSize2 = appHeight*45/70;
   widthDrawSize2 = appWidth*6/75;
-  heightDrawSize2 = appHeight*4/80;
+  heightDrawSize2 = appHeight*5/80;
   //
   xNoDrawZone1 = appWidth*1/1000;
   yNoDrawZone1 = yRectBackground;
@@ -265,7 +265,7 @@ void draw() {
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(ResetDefaultInk);
   rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1);
-  //rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
+  rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
   //if (ExitConfirmation==true) ExitConfirmation();
   //
 } //End draw
@@ -294,6 +294,11 @@ void mousePressed() {
   if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack) DrawingColor=Black;
   //
   if (mouseX>xDrawSize1 && mouseX<xDrawSize1+widthDrawSize1 && mouseY>yDrawSize1 && mouseY<yDrawSize1+heightDrawSize1) {
+    DrawVariable1 = -45;
+    DrawVariable2 = -45;
+    DrawVariable3 = 90;
+  }
+  if (mouseX>xDrawSize2 && mouseX<xDrawSize2+widthDrawSize2 && mouseY>yDrawSize2 && mouseY<yDrawSize2+heightDrawSize2) {
     DrawVariable1 = -30;
     DrawVariable2 = -30;
     DrawVariable3 = 60;
