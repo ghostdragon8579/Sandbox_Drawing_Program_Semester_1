@@ -182,7 +182,7 @@ void setup() {
   xDrawSize1 = appWidth*1/25;
   yDrawSize1 = appHeight*28/50;
   widthDrawSize1 = appWidth*6/75;
-  heightDrawSize1 = appHeight*3/70;
+  heightDrawSize1 = appHeight*2/35;
   //
   xNoDrawZone1 = appWidth*1/1000;
   yNoDrawZone1 = yRectBackground;
@@ -212,6 +212,7 @@ void draw() {
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
     fill(DrawingColor);
     rect(mouseX+DrawVariable1, mouseY+DrawVariable2, DrawVariable3, DrawVariable3);
+    //circle(mouseX-DrawVariable1*1/3, mouseY-DrawVariable2*1/3, DrawVariable3);
     fill(ResetDefaultInk);
   }
   if(mouseButton == RIGHT){
