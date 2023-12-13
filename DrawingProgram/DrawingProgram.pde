@@ -187,6 +187,11 @@ void setup() {
   widthBlack = appWidth*2/70;
   heightBlack = appHeight*3/70;
   //
+  xWidthTitle = appWidth*1/30;
+  yWidthTitle = appHeight*504/1000;
+  widthWidthTitle = appWidth*2/21;
+  heightWidthTitle = appHeight*3/70;
+  //
   xWidthSelection = appWidth*1/30;
   yWidthSelection = appHeight*6/11;
   widthWidthSelection = appWidth*2/21;
@@ -291,6 +296,7 @@ void draw() {
   fill(ResetDefaultInk);
   rect(xErase, yErase, widthErase, heightErase);
   image(EraseButton, xErase, yErase, widthErase, heightErase);
+  rect(xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
   fill(DarkGray);
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(ResetDefaultInk);
@@ -300,6 +306,20 @@ void draw() {
   rect(xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4);
   rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
   //if (ExitConfirmation==true) ExitConfirmation();
+  //
+  fill(Black);
+  textAlign(CENTER, CENTER); 
+  size = 20;
+  textFont(TitleFont, size); 
+  text(Colors, xColorTitle, yColorTitle, widthColorTitle, heightColorTitle);
+  fill(ResetDefaultInk);
+  //
+  fill(Black);
+  textAlign(CENTER, CENTER); 
+  size = 20;
+  textFont(TitleFont, size); 
+  text(Width, xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
+  fill(ResetDefaultInk);
   //
 } //End draw
 //
