@@ -1,7 +1,10 @@
 //Global Variables
 PImage QuitButton;
 PImage EraseButton;
-PFont QuestionFont;
+PFont GeneralFont;
+PFont TitleFont;
+String Colors = "Drawing Colors";
+String Width = "Drawing Width";
 String Yes = "Yes";
 String No = "No";
 String Erase = "Erase all";
@@ -52,7 +55,9 @@ float xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2;
 float xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3;
 float xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4;
 float xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5;
+float xColorTitle, yColorTitle, widthColorTitle, heightColorTitle;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
+float xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 float DrawVariable1, DrawVariable2, DrawVariable3;
 float EraseVariable1, EraseVariable2;
@@ -111,6 +116,11 @@ void setup() {
   yErase = appHeight*1/11+appHeight*5/16;
   widthErase = appWidth*1/21;
   heightErase = appHeight*1/13;
+  //
+  xColorTitle = appWidth*1/30;
+  yColorTitle = appHeight*1/21;
+  widthColorTitle = appWidth*2/21;
+  heightColorTitle = appHeight*3/70;
   //
   xColorSelection = appWidth*1/30;
   yColorSelection = appHeight*1/11;
@@ -221,7 +231,8 @@ void setup() {
   DrawVariable2 = -15;
   DrawVariable3 = 30;
   //
-  QuestionFont = createFont("Arial", 55);
+  GeneralFont = createFont("Arial", 55);
+  TitleFont = createFont("Times New Roman Bold", 55);
   //
   noStroke();
   rect(xRectBackground, yRectBackground, widthRectBackground, heightRectBackground);
@@ -250,6 +261,7 @@ void draw() {
   rect(xNoDrawZone2, yNoDrawZone2, widthNoDrawZone2, heightNoDrawZone2);
   rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
+  rect(xColorTitle, yColorTitle, widthColorTitle, heightColorTitle);
   fill(DarkGray);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
   fill(Blue);

@@ -23,21 +23,21 @@ void ExitConfirmation () {
   fill(DarkGreen);
   textAlign(CENTER, CENTER); 
   size = 50;
-  textFont(QuestionFont, 50); 
+  textFont(GeneralFont, 50); 
   text(Yes, xConfirmationYes, yConfirmationYes, widthConfirmationYes, heightConfirmationYes);
   fill(ResetDefaultInk);
   //
   fill(DarkRed);
   textAlign(CENTER, CENTER); 
   size = 50;
-  textFont(QuestionFont, 50); 
+  textFont(GeneralFont, 50); 
   text(No, xConfirmationNo, yConfirmationNo, widthConfirmationNo, heightConfirmationNo);
   fill(ResetDefaultInk);
   //
   fill(Black);
   textAlign(CENTER, CENTER); 
   size = 50;
-  textFont(QuestionFont, 40); 
+  textFont(GeneralFont, 40); 
   text(Question, xConfirmationQuestion, yConfirmationQuestion, widthConfirmationQuestion, heightConfirmationQuestion);
   fill(ResetDefaultInk);
   //
