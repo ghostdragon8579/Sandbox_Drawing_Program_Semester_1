@@ -251,7 +251,6 @@ void draw() {
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
     fill(DrawingColor);
     rect(mouseX+DrawVariable1, mouseY+DrawVariable2, DrawVariable3, DrawVariable3);
-    //circle(mouseX-DrawVariable1*1/3, mouseY-DrawVariable2*1/3, DrawVariable3);
     fill(ResetDefaultInk);
   }
   if(mouseButton == RIGHT){
