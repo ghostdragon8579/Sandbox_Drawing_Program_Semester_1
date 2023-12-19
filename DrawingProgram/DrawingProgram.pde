@@ -134,58 +134,58 @@ void setup() {
   //
   xGreen = appWidth*1/11;
   yGreen = appHeight*1/10;
-  widthGreen = appWidth*2/70;
-  heightGreen = appHeight*3/70;
+  widthGreen = widthBlue;
+  heightGreen = heightBlue;
   //
   xRed = appWidth*1/25;
   yRed = appHeight*3/20; 
-  widthRed = appWidth*2/70;
-  heightRed = appHeight*3/70;
+  widthRed = widthBlue;
+  heightRed = heightBlue;
   //
   xYellow = appWidth*1/11;
   yYellow = yRed;
-  widthYellow = widthRed;
-  heightYellow = heightRed;
+  widthYellow = widthBlue;
+  heightYellow = heightBlue;
   //
   xCyan = appWidth*1/25;
   yCyan = appHeight*4/20;
-  widthCyan = appWidth*2/70;
-  heightCyan = appHeight*3/70;
+  widthCyan = widthBlue;
+  heightCyan = heightBlue;
   //
   xPurple = appWidth*1/11;
   yPurple = appHeight*4/20;
-  widthPurple = appWidth*2/70;
-  heightPurple = appHeight*3/70;
+  widthPurple = widthBlue;
+  heightPurple = heightBlue;
   //
   xBrown = appWidth*1/25;
   yBrown = appHeight*5/20;
-  widthBrown = appWidth*2/70;
-  heightBrown = appHeight*3/70;
+  widthBrown = widthBlue;
+  heightBrown = heightBlue;
   //
   xMagenta = appWidth*1/11;
   yMagenta = appHeight*5/20;
-  widthMagenta = appWidth*2/70;
-  heightMagenta = appHeight*3/70;
+  widthMagenta = widthBlue;
+  heightMagenta = heightBlue;
   //
   xOrange = appWidth*1/25;
   yOrange = appHeight*6/20;
-  widthOrange = appWidth*2/70;
-  heightOrange = appHeight*3/70;
+  widthOrange = widthBlue;
+  heightOrange = heightBlue;
   //
   xNavy = appWidth*1/11;
   yNavy = appHeight*6/20;
-  widthNavy = appWidth*2/70;
-  heightNavy = appHeight*3/70;
+  widthNavy = widthBlue;
+  heightNavy = heightBlue;
   //
   xGray = appWidth*1/25;
   yGray = appHeight*7/20;
-  widthGray = appWidth*2/70;
-  heightGray = appHeight*3/70;
+  widthGray = widthBlue;
+  heightGray = heightBlue;
   //
   xBlack = appWidth*1/11;
   yBlack = appHeight*7/20;
-  widthBlack = appWidth*2/70;
-  heightBlack = appHeight*3/70;
+  widthBlack = widthBlue;
+  heightBlack = heightBlue;
   //
   xWidthTitle = appWidth*1/30;
   yWidthTitle = appHeight*504/1000;
