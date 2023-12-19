@@ -118,7 +118,7 @@ void setup() {
   heightErase = appHeight*1/13;
   //
   xColorTitle = appWidth*1/30;
-  yColorTitle = appHeight*1/21;
+  yColorTitle = appHeight*1/20;
   widthColorTitle = appWidth*2/21;
   heightColorTitle = appHeight*3/70;
   //
@@ -204,22 +204,22 @@ void setup() {
   //
   xDrawSize2 = appWidth*1/25;
   yDrawSize2 = appHeight*45/70;
-  widthDrawSize2 = appWidth*6/75;
+  widthDrawSize2 = widthDrawSize1;
   heightDrawSize2 = appHeight*5/80;
   //
   xDrawSize3 = appWidth*1/25;
   yDrawSize3 = appHeight*57/80;
-  widthDrawSize3 = appWidth*6/75;
+  widthDrawSize3 = widthDrawSize1;
   heightDrawSize3 = appHeight*4/80;
   //
   xDrawSize4 = appWidth*1/25;
   yDrawSize4 = appHeight*77/100;
-  widthDrawSize4 = appWidth*6/75;
+  widthDrawSize4 = widthDrawSize1;
   heightDrawSize4 = appHeight*3/80;
   //
   xDrawSize5 = appWidth*1/25;
   yDrawSize5 = appHeight*163/200;
-  widthDrawSize5 = appWidth*6/75;
+  widthDrawSize5 = widthDrawSize1;
   heightDrawSize5 = appHeight*2/80;
   //
   xNoDrawZone1 = appWidth*1/1000;
@@ -229,7 +229,7 @@ void setup() {
   //
   xNoDrawZone2 = appWidth*5/6;
   yNoDrawZone2 = yRectBackground;
-  widthNoDrawZone2 = appWidth*1/6;
+  widthNoDrawZone2 = widthNoDrawZone1;
   heightNoDrawZone2 = heightRectBackground;
   //
   DrawVariable1 = -15;
