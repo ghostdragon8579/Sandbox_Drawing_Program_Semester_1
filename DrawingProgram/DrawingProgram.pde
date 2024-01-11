@@ -4,6 +4,7 @@ PImage EraseButton;
 PFont GeneralFont;
 PFont TitleFont;
 String Colors = "Drawing Colors";
+String Selection = "Selected Color";
 String Width = "Drawing Width";
 String Yes = "Yes";
 String No = "No";
@@ -61,6 +62,7 @@ float xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 float DrawVariable1, DrawVariable2, DrawVariable3;
 float EraseVariable1, EraseVariable2;
+float ColorIndicator1, ColorIndicator2, ColorIndicator3;
 int appWidth, appHeight;
 int size;
 Boolean ExitConfirmation=false;
@@ -232,6 +234,10 @@ void setup() {
   widthNoDrawZone2 = widthNoDrawZone1;
   heightNoDrawZone2 = heightRectBackground;
   //
+  ColorIndicator1 = appWidth*48/50;
+  ColorIndicator2 = appHeight*29/31;
+  ColorIndicator3 = appWidth*1/20;
+  //
   DrawVariable1 = -15;
   DrawVariable2 = -15;
   DrawVariable3 = 30;
@@ -300,12 +306,14 @@ void draw() {
   fill(LightGray);
   rect(xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
-  fill(DrawingColor);
+  fill(Black);
   rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1);
   rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
   rect(xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3);
   rect(xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4);
   rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
+  fill(DrawingColor);
+  circle(ColorIndicator1, ColorIndicator2, ColorIndicator3);
   fill(ResetDefaultInk);
   //if (ExitConfirmation==true) ExitConfirmation();
   //
