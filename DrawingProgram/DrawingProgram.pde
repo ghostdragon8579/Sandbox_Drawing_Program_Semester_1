@@ -5,6 +5,7 @@ PFont GeneralFont;
 PFont TitleFont;
 String Colors = "Drawing Colors";
 String Selection = "Selected Color";
+String Selection2 = "Selected Width";
 String Width = "Drawing Width";
 String Yes = "Yes";
 String No = "No";
@@ -62,7 +63,10 @@ float xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 float DrawVariable1, DrawVariable2, DrawVariable3;
 float EraseVariable1, EraseVariable2;
+float ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight;
 float ColorIndicator1, ColorIndicator2, ColorIndicator3;
+float WidthTextx, WidthTexty, WidthTextwidth, WidthTextheight;
+float WidthIndicator1, WidthIndicator2;
 int appWidth, appHeight;
 int size;
 Boolean ExitConfirmation=false;
@@ -189,6 +193,11 @@ void setup() {
   widthBlack = widthBlue;
   heightBlack = heightBlue;
   //
+  ColorTextx = appWidth*46/50;
+  ColorTexty = appHeight*11/13;
+  ColorTextwidth = appWidth*2/25;
+  ColorTextheight = heightColorTitle;
+  //
   xWidthTitle = appWidth*1/30;
   yWidthTitle = appHeight*504/1000;
   widthWidthTitle = appWidth*2/21;
@@ -224,6 +233,11 @@ void setup() {
   widthDrawSize5 = widthDrawSize1;
   heightDrawSize5 = appHeight*2/80;
   //
+  WidthTextx = appWidth*5/6;
+  WidthTexty = ColorTexty;
+  WidthTextwidth = appWidth*2/25;
+  WidthTextheight = heightWidthTitle;
+  //
   xNoDrawZone1 = appWidth*1/1000;
   yNoDrawZone1 = yRectBackground;
   widthNoDrawZone1 = appWidth*1/6;
@@ -237,6 +251,9 @@ void setup() {
   ColorIndicator1 = appWidth*48/50;
   ColorIndicator2 = appHeight*29/31;
   ColorIndicator3 = appWidth*1/20;
+  //
+  WidthIndicator1 = appWidth*21/24;
+  WidthIndicator2 = appHeight*29/31;
   //
   DrawVariable1 = -15;
   DrawVariable2 = -15;
@@ -275,6 +292,10 @@ void draw() {
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   rect(xColorTitle, yColorTitle, widthColorTitle, heightColorTitle);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
+  rect(ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight);
+  rect(xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
+  rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
+  rect(WidthTextx, WidthTexty, WidthTextwidth, WidthTextheight);
   fill(Blue);
   rect(xBlue, yBlue, widthBlue, heightBlue);
   fill(Green);
@@ -303,10 +324,8 @@ void draw() {
   rect(xErase, yErase, widthErase, heightErase);
   fill(ResetDefaultInk);
   image(EraseButton, xErase, yErase, widthErase, heightErase);
-  fill(LightGray);
-  rect(xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
-  rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   fill(Black);
+  circle(WidthIndicator1, WidthIndicator2, DrawVariable3);
   rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1);
   rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
   rect(xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3);
@@ -329,6 +348,20 @@ void draw() {
   size = 20;
   textFont(TitleFont, size); 
   text(Width, xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
+  fill(ResetDefaultInk);
+  //
+  fill(Black);
+  textAlign(CENTER, CENTER); 
+  size = 19;
+  textFont(TitleFont, size); 
+  text(Selection, ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight);
+  fill(ResetDefaultInk);
+  //
+  fill(Black);
+  textAlign(CENTER, CENTER); 
+  size = 19;
+  textFont(TitleFont, size); 
+  text(Selection2, WidthTextx, WidthTexty, WidthTextwidth, WidthTextheight);
   fill(ResetDefaultInk);
   //
 } //End draw
