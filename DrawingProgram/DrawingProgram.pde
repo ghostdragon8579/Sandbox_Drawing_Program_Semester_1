@@ -350,7 +350,7 @@ void draw() {
   text(Width, xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
   fill(ResetDefaultInk);
   //
-  fill(Black);
+  fill(DrawingColor);
   textAlign(CENTER, CENTER); 
   size = 19;
   textFont(TitleFont, size); 
