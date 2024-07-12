@@ -256,6 +256,31 @@ void draw() {
     rect(xErase, yErase, widthErase, heightErase);
     fill(ResetDefaultInk);
   }
+  if (mouseX>xDrawSize1 && mouseX<xDrawSize1+widthDrawSize1 && mouseY>yDrawSize1 && mouseY<yDrawSize1+heightDrawSize1) {
+    fill(hoverOverColor);
+    rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xDrawSize2 && mouseX<xDrawSize2+widthDrawSize2 && mouseY>yDrawSize2 && mouseY<yDrawSize2+heightDrawSize2) {
+    fill(hoverOverColor);
+    rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xDrawSize3 && mouseX<xDrawSize3+widthDrawSize3 && mouseY>yDrawSize3 && mouseY<yDrawSize3+heightDrawSize3) {
+    fill(hoverOverColor);
+    rect(xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xDrawSize4 && mouseX<xDrawSize4+widthDrawSize4 && mouseY>yDrawSize4 && mouseY<yDrawSize4+heightDrawSize4) {
+    fill(hoverOverColor);
+    rect(xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xDrawSize5 && mouseX<xDrawSize5+widthDrawSize5 && mouseY>yDrawSize5 && mouseY<yDrawSize5+heightDrawSize5) {
+    fill(hoverOverColor);
+    rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
+    fill(ResetDefaultInk);
+  }
   //
   if (ExitConfirmation==true) ExitConfirmation();
   //
