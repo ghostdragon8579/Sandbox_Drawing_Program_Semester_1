@@ -93,14 +93,14 @@ void setup() {
   widthRectBackground = appWidth*4/6;
   heightRectBackground = appHeight-1;
   //
-  xRectQuit = appWidth*11/12;
+  xRectQuit = appWidth*15/16;
   yRectQuit = appHeight*1/1000;
-  widthRectQuit = appWidth*1/12;
-  heightRectQuit = appHeight*1/8;
+  widthRectQuit = appWidth*1/16;
+  heightRectQuit = appHeight*1/16;
   //
-  xConfirmationYes = appWidth*5/6; yConfirmationYes = appHeight*1/3; widthConfirmationYes = appWidth*1/12; heightConfirmationYes = appHeight*1/11;
+  xConfirmationYes = appWidth*41/48; yConfirmationYes = appHeight*1/4; widthConfirmationYes = appWidth*3/48; heightConfirmationYes = appHeight*1/22;
   xConfirmationNo = appWidth*11/12; yConfirmationNo = yConfirmationYes; widthConfirmationNo = widthConfirmationYes; heightConfirmationNo = heightConfirmationYes;
-  xConfirmationQuestion = appWidth*5/6; yConfirmationQuestion = appHeight*1/6; widthConfirmationQuestion = appWidth*1/6; heightConfirmationQuestion = appHeight*2/13;
+  xConfirmationQuestion = appWidth*41/48; yConfirmationQuestion = appHeight*1/10; widthConfirmationQuestion = appWidth*6/48; heightConfirmationQuestion = appHeight*3/26;
   //
   xColorTitle = appWidth*1/30; yColorTitle = appHeight*1/20; widthColorTitle = appWidth*2/21; heightColorTitle = appHeight*3/70;
   xColorSelection = appWidth*1/30; yColorSelection = appHeight*1/11; widthColorSelection = appWidth*2/21; heightColorSelection = appHeight*5/16; 
@@ -279,6 +279,66 @@ void draw() {
   if (mouseX>xDrawSize5 && mouseX<xDrawSize5+widthDrawSize5 && mouseY>yDrawSize5 && mouseY<yDrawSize5+heightDrawSize5) {
     fill(hoverOverColor);
     rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue) {
+    fill(hoverOverColor);
+    rect(xBlue, yBlue, widthBlue, heightBlue);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xGreen && mouseX<xGreen+widthGreen && mouseY>yGreen && mouseY<yGreen+heightGreen) {
+    fill(hoverOverColor);
+    rect(xGreen, yGreen, widthGreen, heightGreen);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xRed && mouseX<xRed+widthRed && mouseY>yRed && mouseY<yRed+heightRed) {
+    fill(hoverOverColor);
+    rect(xRed, yRed, widthRed, heightRed);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xYellow && mouseX<xYellow+widthYellow && mouseY>yYellow && mouseY<yYellow+heightYellow) {
+    fill(hoverOverColor);
+    rect(xYellow, yYellow, widthYellow, heightYellow);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xCyan && mouseX<xCyan+widthCyan && mouseY>yCyan && mouseY<yCyan+heightCyan) {
+    fill(hoverOverColor);
+    rect(xCyan, yCyan, widthCyan, heightCyan);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xPurple && mouseX<xPurple+widthPurple && mouseY>yPurple && mouseY<yPurple+heightPurple) {
+    fill(hoverOverColor);
+    rect(xPurple, yPurple, widthPurple, heightPurple);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xBrown && mouseX<xBrown+widthBrown && mouseY>yBrown && mouseY<yBrown+heightBrown) {
+    fill(hoverOverColor);
+    rect(xBrown, yBrown, widthBrown, heightBrown);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xMagenta && mouseX<xMagenta+widthMagenta && mouseY>yMagenta && mouseY<yMagenta+heightMagenta) {
+    fill(hoverOverColor);
+    rect(xMagenta, yMagenta, widthMagenta, heightMagenta);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xOrange && mouseX<xOrange+widthOrange && mouseY>yOrange && mouseY<yOrange+heightOrange) {
+    fill(hoverOverColor);
+    rect(xOrange, yOrange, widthOrange, heightOrange);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy) {
+    fill(hoverOverColor);
+    rect(xNavy, yNavy, widthNavy, heightNavy);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray) {
+    fill(hoverOverColor);
+    rect(xGray, yGray, widthGray, heightGray);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack) {
+    fill(hoverOverColor);
+    rect(xBlack, yBlack, widthBlack, heightBlack);
     fill(ResetDefaultInk);
   }
   //
