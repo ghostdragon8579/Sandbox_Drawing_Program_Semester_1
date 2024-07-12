@@ -127,16 +127,8 @@ void setup() {
   xDrawSize5 = appWidth*1/25; yDrawSize5 = appHeight*163/200; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
   xNoDrawZone1 = appWidth*1/1000; yNoDrawZone1 = yRectBackground; widthNoDrawZone1 = appWidth*1/6; heightNoDrawZone1 = heightRectBackground;
   xNoDrawZone2 = appWidth*5/6; yNoDrawZone2 = yRectBackground; widthNoDrawZone2 = widthNoDrawZone1; heightNoDrawZone2 = heightRectBackground;
-  //
-  ColorTextx = appWidth*2/25;
-  ColorTexty = appHeight*113/130;
-  ColorTextwidth = appWidth*2/25;
-  ColorTextheight = heightColorTitle;
-  //
-  WidthTextx = appWidth*1/600;
-  WidthTexty = ColorTexty;
-  WidthTextwidth = appWidth*2/25;
-  WidthTextheight = heightWidthTitle;
+  ColorTextx = appWidth*2/25; ColorTexty = appHeight*113/130; ColorTextwidth = appWidth*2/25; ColorTextheight = heightColorTitle;
+  WidthTextx = appWidth*1/600; WidthTexty = ColorTexty; WidthTextwidth = appWidth*2/25; WidthTextheight = heightWidthTitle;
   //
   ColorIndicator1 = appWidth*3/25;
   ColorIndicator2 = appHeight*95/100;
@@ -216,7 +208,7 @@ void draw() {
   image(EraseButton, xErase, yErase, widthErase, heightErase);
   fill(Black);
   circle(WidthIndicator1, WidthIndicator2, DrawVariable3);
-  rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1);
+  rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1); 
   rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
   rect(xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3);
   rect(xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4);
@@ -252,6 +244,18 @@ void draw() {
   textFont(TitleFont, size); 
   text(Selection2, WidthTextx, WidthTexty, WidthTextwidth, WidthTextheight);
   fill(ResetDefaultInk);
+  //
+  color hoverOverColor=color(255, 255, 255, 64); 
+  if (mouseX>xRectQuit && mouseX<xRectQuit+widthRectQuit && mouseY>yRectQuit && mouseY<yRectQuit+heightRectQuit) {
+    fill(hoverOverColor);
+    rect(xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xErase && mouseX<xErase+widthErase && mouseY>yErase && mouseY<yErase+heightErase) {
+    fill(hoverOverColor);
+    rect(xErase, yErase, widthErase, heightErase);
+    fill(ResetDefaultInk);
+  }
   //
   if (ExitConfirmation==true) ExitConfirmation();
   //
