@@ -1,7 +1,5 @@
 void ExitConfirmation () {
   //
-  fill(Gray);
-  rect(ConfirmationBackgroundx, ConfirmationBackgroundy, ConfirmationBackgroundwidth, ConfirmationBackgroundheight);
   fill(ResetDefaultInk);
   rect(xConfirmationYes, yConfirmationYes, widthConfirmationYes, heightConfirmationYes);
   rect(xConfirmationNo, yConfirmationNo, widthConfirmationNo, heightConfirmationNo);

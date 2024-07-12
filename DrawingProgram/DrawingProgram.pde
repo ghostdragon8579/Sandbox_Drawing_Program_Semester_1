@@ -4,13 +4,13 @@ PImage EraseButton;
 PFont GeneralFont;
 PFont TitleFont;
 String Colors = "Drawing Colors";
+String Width = "Drawing Width";
 String Selection = "Selected Color";
 String Selection2 = "Selected Width";
-String Width = "Drawing Width";
 String Yes = "Yes";
 String No = "No";
 String Erase = "Erase all";
-String Question = "Are you sure you want to quit?";
+String Question = "Are you sure you would like to quit?";
 String Question2 = "Are you sure you want to erase all?";
 color DarkGreen=#02B703;
 color DarkRed=#AA021B;
@@ -93,167 +93,57 @@ void setup() {
   widthRectBackground = appWidth*4/6;
   heightRectBackground = appHeight-1;
   //
-  ConfirmationBackgroundx = appWidth*0;
-  ConfirmationBackgroundy = appHeight*0;
-  ConfirmationBackgroundwidth = appWidth-1;
-  ConfirmationBackgroundheight = appHeight-1;
-  //
-  xConfirmationYes = appWidth*1/4;
-  yConfirmationYes = appHeight*3/7;
-  widthConfirmationYes = appWidth*1/7;
-  heightConfirmationYes = appHeight*2/11;
-  //
-  xConfirmationNo = appWidth*3/5;
-  yConfirmationNo = yConfirmationYes;
-  widthConfirmationNo = appWidth*1/7;
-  heightConfirmationNo = heightConfirmationYes;
-  //
-  xConfirmationQuestion = appWidth*1/4;
-  yConfirmationQuestion = appHeight*1/6;
-  widthConfirmationQuestion = appWidth*1/2;
-  heightConfirmationQuestion = appHeight*2/13;
-  //
   xRectQuit = appWidth*11/12;
   yRectQuit = appHeight*1/1000;
   widthRectQuit = appWidth*1/12;
   heightRectQuit = appHeight*1/8;
   //
-  xErase = appWidth*1/18;
-  yErase = appHeight*1/11+appHeight*5/16;
-  widthErase = appWidth*1/21;
-  heightErase = appHeight*1/13;
+  xConfirmationYes = appWidth*5/6; yConfirmationYes = appHeight*1/3; widthConfirmationYes = appWidth*1/12; heightConfirmationYes = appHeight*1/11;
+  xConfirmationNo = appWidth*11/12; yConfirmationNo = yConfirmationYes; widthConfirmationNo = widthConfirmationYes; heightConfirmationNo = heightConfirmationYes;
+  xConfirmationQuestion = appWidth*5/6; yConfirmationQuestion = appHeight*1/6; widthConfirmationQuestion = appWidth*1/6; heightConfirmationQuestion = appHeight*2/13;
   //
-  xColorTitle = appWidth*1/30;
-  yColorTitle = appHeight*1/20;
-  widthColorTitle = appWidth*2/21;
-  heightColorTitle = appHeight*3/70;
+  xColorTitle = appWidth*1/30; yColorTitle = appHeight*1/20; widthColorTitle = appWidth*2/21; heightColorTitle = appHeight*3/70;
+  xColorSelection = appWidth*1/30; yColorSelection = appHeight*1/11; widthColorSelection = appWidth*2/21; heightColorSelection = appHeight*5/16; 
+  xBlue = appWidth*1/25; yBlue = appHeight*1/10; widthBlue = appWidth*2/70; heightBlue = appHeight*3/70;
+  xGreen = appWidth*1/11; yGreen = appHeight*1/10; widthGreen = widthBlue; heightGreen = heightBlue;
+  xRed = appWidth*1/25; yRed = appHeight*3/20; widthRed = widthBlue; heightRed = heightBlue;
+  xYellow = appWidth*1/11; yYellow = yRed; widthYellow = widthBlue; heightYellow = heightBlue;
+  xCyan = appWidth*1/25; yCyan = appHeight*4/20; widthCyan = widthBlue; heightCyan = heightBlue;
+  xPurple = appWidth*1/11; yPurple = appHeight*4/20; widthPurple = widthBlue; heightPurple = heightBlue;
+  xBrown = appWidth*1/25; yBrown = appHeight*5/20; widthBrown = widthBlue; heightBrown = heightBlue;
+  xMagenta = appWidth*1/11; yMagenta = appHeight*5/20; widthMagenta = widthBlue; heightMagenta = heightBlue;
+  xOrange = appWidth*1/25; yOrange = appHeight*6/20; widthOrange = widthBlue; heightOrange = heightBlue;
+  xNavy = appWidth*1/11; yNavy = appHeight*6/20; widthNavy = widthBlue; heightNavy = heightBlue;
+  xGray = appWidth*1/25; yGray = appHeight*7/20; widthGray = widthBlue; heightGray = heightBlue;
+  xBlack = appWidth*1/11; yBlack = appHeight*7/20; widthBlack = widthBlue; heightBlack = heightBlue;
+  xErase = appWidth*1/18; yErase = appHeight*1/11+appHeight*5/16; widthErase = appWidth*1/21; heightErase = appHeight*1/13;
   //
-  xColorSelection = appWidth*1/30;
-  yColorSelection = appHeight*1/11;
-  widthColorSelection = appWidth*2/21;
-  heightColorSelection = appHeight*5/16;
+  xWidthTitle = appWidth*1/30; yWidthTitle = appHeight*504/1000; widthWidthTitle = appWidth*2/21; heightWidthTitle = appHeight*3/70;
+  xWidthSelection = appWidth*1/30; yWidthSelection = appHeight*6/11; widthWidthSelection = appWidth*2/21; heightWidthSelection = appHeight*5/16;
+  xDrawSize1 = appWidth*1/25; yDrawSize1 = appHeight*28/50; widthDrawSize1 = appWidth*6/75; heightDrawSize1 = appHeight*5/80;
+  xDrawSize2 = appWidth*1/25; yDrawSize2 = appHeight*45/70; widthDrawSize2 = widthDrawSize1; heightDrawSize2 = appHeight*4/80;
+  xDrawSize3 = appWidth*1/25; yDrawSize3 = appHeight*57/80; widthDrawSize3 = widthDrawSize1; heightDrawSize3 = appHeight*3/80;
+  xDrawSize4 = appWidth*1/25; yDrawSize4 = appHeight*77/100; widthDrawSize4 = widthDrawSize1; heightDrawSize4 = appHeight*2/80;
+  xDrawSize5 = appWidth*1/25; yDrawSize5 = appHeight*163/200; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
+  xNoDrawZone1 = appWidth*1/1000; yNoDrawZone1 = yRectBackground; widthNoDrawZone1 = appWidth*1/6; heightNoDrawZone1 = heightRectBackground;
+  xNoDrawZone2 = appWidth*5/6; yNoDrawZone2 = yRectBackground; widthNoDrawZone2 = widthNoDrawZone1; heightNoDrawZone2 = heightRectBackground;
   //
-  xBlue = appWidth*1/25;
-  yBlue = appHeight*1/10;
-  widthBlue = appWidth*2/70;
-  heightBlue = appHeight*3/70;
-  //
-  xGreen = appWidth*1/11;
-  yGreen = appHeight*1/10;
-  widthGreen = widthBlue;
-  heightGreen = heightBlue;
-  //
-  xRed = appWidth*1/25;
-  yRed = appHeight*3/20; 
-  widthRed = widthBlue;
-  heightRed = heightBlue;
-  //
-  xYellow = appWidth*1/11;
-  yYellow = yRed;
-  widthYellow = widthBlue;
-  heightYellow = heightBlue;
-  //
-  xCyan = appWidth*1/25;
-  yCyan = appHeight*4/20;
-  widthCyan = widthBlue;
-  heightCyan = heightBlue;
-  //
-  xPurple = appWidth*1/11;
-  yPurple = appHeight*4/20;
-  widthPurple = widthBlue;
-  heightPurple = heightBlue;
-  //
-  xBrown = appWidth*1/25;
-  yBrown = appHeight*5/20;
-  widthBrown = widthBlue;
-  heightBrown = heightBlue;
-  //
-  xMagenta = appWidth*1/11;
-  yMagenta = appHeight*5/20;
-  widthMagenta = widthBlue;
-  heightMagenta = heightBlue;
-  //
-  xOrange = appWidth*1/25;
-  yOrange = appHeight*6/20;
-  widthOrange = widthBlue;
-  heightOrange = heightBlue;
-  //
-  xNavy = appWidth*1/11;
-  yNavy = appHeight*6/20;
-  widthNavy = widthBlue;
-  heightNavy = heightBlue;
-  //
-  xGray = appWidth*1/25;
-  yGray = appHeight*7/20;
-  widthGray = widthBlue;
-  heightGray = heightBlue;
-  //
-  xBlack = appWidth*1/11;
-  yBlack = appHeight*7/20;
-  widthBlack = widthBlue;
-  heightBlack = heightBlue;
-  //
-  ColorTextx = appWidth*46/50;
-  ColorTexty = appHeight*11/13;
+  ColorTextx = appWidth*2/25;
+  ColorTexty = appHeight*113/130;
   ColorTextwidth = appWidth*2/25;
   ColorTextheight = heightColorTitle;
   //
-  xWidthTitle = appWidth*1/30;
-  yWidthTitle = appHeight*504/1000;
-  widthWidthTitle = appWidth*2/21;
-  heightWidthTitle = appHeight*3/70;
-  //
-  xWidthSelection = appWidth*1/30;
-  yWidthSelection = appHeight*6/11;
-  widthWidthSelection = appWidth*2/21;
-  heightWidthSelection = appHeight*5/16;
-  //
-  xDrawSize1 = appWidth*1/25;
-  yDrawSize1 = appHeight*28/50;
-  widthDrawSize1 = appWidth*6/75;
-  heightDrawSize1 = appHeight*6/80;
-  //
-  xDrawSize2 = appWidth*1/25;
-  yDrawSize2 = appHeight*45/70;
-  widthDrawSize2 = widthDrawSize1;
-  heightDrawSize2 = appHeight*5/80;
-  //
-  xDrawSize3 = appWidth*1/25;
-  yDrawSize3 = appHeight*57/80;
-  widthDrawSize3 = widthDrawSize1;
-  heightDrawSize3 = appHeight*4/80;
-  //
-  xDrawSize4 = appWidth*1/25;
-  yDrawSize4 = appHeight*77/100;
-  widthDrawSize4 = widthDrawSize1;
-  heightDrawSize4 = appHeight*3/80;
-  //
-  xDrawSize5 = appWidth*1/25;
-  yDrawSize5 = appHeight*163/200;
-  widthDrawSize5 = widthDrawSize1;
-  heightDrawSize5 = appHeight*2/80;
-  //
-  WidthTextx = appWidth*5/6;
+  WidthTextx = appWidth*1/600;
   WidthTexty = ColorTexty;
   WidthTextwidth = appWidth*2/25;
   WidthTextheight = heightWidthTitle;
   //
-  xNoDrawZone1 = appWidth*1/1000;
-  yNoDrawZone1 = yRectBackground;
-  widthNoDrawZone1 = appWidth*1/6;
-  heightNoDrawZone1 = heightRectBackground;
+  ColorIndicator1 = appWidth*3/25;
+  ColorIndicator2 = appHeight*95/100;
+  ColorIndicator3 = appWidth*1/25;
   //
-  xNoDrawZone2 = appWidth*5/6;
-  yNoDrawZone2 = yRectBackground;
-  widthNoDrawZone2 = widthNoDrawZone1;
-  heightNoDrawZone2 = heightRectBackground;
-  //
-  ColorIndicator1 = appWidth*48/50;
-  ColorIndicator2 = appHeight*29/31;
-  ColorIndicator3 = appWidth*1/20;
-  //
-  WidthIndicator1 = appWidth*21/24;
-  WidthIndicator2 = appHeight*29/31;
+  WidthIndicator1 = appWidth*1/24;
+  WidthIndicator2 = ColorIndicator2;
   //
   DrawVariable1 = -15;
   DrawVariable2 = -15;
@@ -269,14 +159,14 @@ void setup() {
 //
 void draw() {
   //
-  if(mouseButton == LEFT){
+  if(mouseButton == LEFT && ExitConfirmation==false){
     noStroke();
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
     fill(DrawingColor);
     rect(mouseX+DrawVariable1, mouseY+DrawVariable2, DrawVariable3, DrawVariable3);
     fill(ResetDefaultInk);
   }
-  if(mouseButton == RIGHT){
+  if(mouseButton == RIGHT && ExitConfirmation==false){
     fill(ResetDefaultInk);
     noStroke();
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
@@ -334,7 +224,6 @@ void draw() {
   fill(DrawingColor);
   circle(ColorIndicator1, ColorIndicator2, ColorIndicator3);
   fill(ResetDefaultInk);
-  //if (ExitConfirmation==true) ExitConfirmation();
   //
   fill(Black);
   textAlign(CENTER, CENTER); 
@@ -364,6 +253,8 @@ void draw() {
   text(Selection2, WidthTextx, WidthTexty, WidthTextwidth, WidthTextheight);
   fill(ResetDefaultInk);
   //
+  if (ExitConfirmation==true) ExitConfirmation();
+  //
 } //End draw
 //
 void keyPressed() {
@@ -373,48 +264,47 @@ void keyPressed() {
 //
 void mousePressed() {
   //
-  if (mouseX>xRectQuit && mouseX<xRectQuit+widthRectQuit && mouseY>yRectQuit && mouseY<yRectQuit+heightRectQuit) exit();
-  //if (mouseX>xRectQuit && mouseX<xRectQuit+widthRectQuit && mouseY>yRectQuit && mouseY<yRectQuit+heightRectQuit) ExitConfirmation=true;
-  //if (mouseX>xConfirmationNo && mouseX<xConfirmationNo+widthConfirmationNo && mouseY>yConfirmationNo && mouseY<yConfirmationNo+heightConfirmationNo) ExitConfirmation=false;
-  //if (mouseX>xConfirmationYes && mouseX<xConfirmationYes+widthConfirmationYes && mouseY>yConfirmationYes && mouseY<yConfirmationYes+heightConfirmationYes) exit();
-  if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue) DrawingColor=Blue;
-  if (mouseX>xGreen && mouseX<xGreen+widthGreen && mouseY>yGreen && mouseY<yGreen+heightGreen) DrawingColor=Green;
-  if (mouseX>xRed && mouseX<xRed+widthRed && mouseY>yRed && mouseY<yRed+heightRed) DrawingColor=Red;
-  if (mouseX>xYellow && mouseX<xYellow+widthYellow && mouseY>yYellow && mouseY<yYellow+heightYellow) DrawingColor=Yellow;
-  if (mouseX>xCyan && mouseX<xCyan+widthCyan && mouseY>yCyan && mouseY<yCyan+heightCyan) DrawingColor=Cyan;
-  if (mouseX>xPurple && mouseX<xPurple+widthPurple && mouseY>yPurple && mouseY<yPurple+heightPurple) DrawingColor=Purple;
-  if (mouseX>xBrown && mouseX<xBrown+widthBrown && mouseY>yBrown && mouseY<yBrown+heightBrown) DrawingColor=Brown;
-  if (mouseX>xMagenta && mouseX<xMagenta+widthMagenta && mouseY>yMagenta && mouseY<yMagenta+heightMagenta) DrawingColor=Magenta;
-  if (mouseX>xOrange && mouseX<xOrange+widthOrange && mouseY>yOrange && mouseY<yOrange+heightOrange) DrawingColor=Orange;
-  if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy) DrawingColor=Navy;
-  if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray) DrawingColor=Gray;
-  if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack) DrawingColor=Black;
-  if (mouseX>xErase && mouseX<xErase+widthErase && mouseY>yErase && mouseY<yErase+heightErase) DrawingColor=ErasingColor;
+  if (mouseX>xRectQuit && mouseX<xRectQuit+widthRectQuit && mouseY>yRectQuit && mouseY<yRectQuit+heightRectQuit) ExitConfirmation=true;
+  if (mouseX>xConfirmationNo && mouseX<xConfirmationNo+widthConfirmationNo && mouseY>yConfirmationNo && mouseY<yConfirmationNo+heightConfirmationNo) ExitConfirmation=false;
+  if (mouseX>xConfirmationYes && mouseX<xConfirmationYes+widthConfirmationYes && mouseY>yConfirmationYes && mouseY<yConfirmationYes+heightConfirmationYes && ExitConfirmation==true) exit();
+  if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue && ExitConfirmation==false) DrawingColor=Blue;
+  if (mouseX>xGreen && mouseX<xGreen+widthGreen && mouseY>yGreen && mouseY<yGreen+heightGreen && ExitConfirmation==false) DrawingColor=Green;
+  if (mouseX>xRed && mouseX<xRed+widthRed && mouseY>yRed && mouseY<yRed+heightRed && ExitConfirmation==false) DrawingColor=Red;
+  if (mouseX>xYellow && mouseX<xYellow+widthYellow && mouseY>yYellow && mouseY<yYellow+heightYellow && ExitConfirmation==false) DrawingColor=Yellow;
+  if (mouseX>xCyan && mouseX<xCyan+widthCyan && mouseY>yCyan && mouseY<yCyan+heightCyan && ExitConfirmation==false) DrawingColor=Cyan;
+  if (mouseX>xPurple && mouseX<xPurple+widthPurple && mouseY>yPurple && mouseY<yPurple+heightPurple && ExitConfirmation==false) DrawingColor=Purple;
+  if (mouseX>xBrown && mouseX<xBrown+widthBrown && mouseY>yBrown && mouseY<yBrown+heightBrown && ExitConfirmation==false) DrawingColor=Brown;
+  if (mouseX>xMagenta && mouseX<xMagenta+widthMagenta && mouseY>yMagenta && mouseY<yMagenta+heightMagenta && ExitConfirmation==false) DrawingColor=Magenta;
+  if (mouseX>xOrange && mouseX<xOrange+widthOrange && mouseY>yOrange && mouseY<yOrange+heightOrange && ExitConfirmation==false) DrawingColor=Orange;
+  if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy && ExitConfirmation==false) DrawingColor=Navy;
+  if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray && ExitConfirmation==false) DrawingColor=Gray;
+  if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack && ExitConfirmation==false) DrawingColor=Black;
+  if (mouseX>xErase && mouseX<xErase+widthErase && mouseY>yErase && mouseY<yErase+heightErase && ExitConfirmation==false) DrawingColor=ErasingColor;
   //
-  if (mouseX>xDrawSize1 && mouseX<xDrawSize1+widthDrawSize1 && mouseY>yDrawSize1 && mouseY<yDrawSize1+heightDrawSize1) {
-    DrawVariable1 = -45;
-    DrawVariable2 = -45;
-    DrawVariable3 = 90;
+  if (mouseX>xDrawSize1 && mouseX<xDrawSize1+widthDrawSize1 && mouseY>yDrawSize1 && mouseY<yDrawSize1+heightDrawSize1 && ExitConfirmation==false) {
+    DrawVariable1 = -35;
+    DrawVariable2 = -35;
+    DrawVariable3 = heightDrawSize1;
   }
-  if (mouseX>xDrawSize2 && mouseX<xDrawSize2+widthDrawSize2 && mouseY>yDrawSize2 && mouseY<yDrawSize2+heightDrawSize2) {
+  if (mouseX>xDrawSize2 && mouseX<xDrawSize2+widthDrawSize2 && mouseY>yDrawSize2 && mouseY<yDrawSize2+heightDrawSize2 && ExitConfirmation==false) {
     DrawVariable1 = -30;
     DrawVariable2 = -30;
-    DrawVariable3 = 60;
+    DrawVariable3 = heightDrawSize2;
   }
-  if (mouseX>xDrawSize3 && mouseX<xDrawSize3+widthDrawSize3 && mouseY>yDrawSize3 && mouseY<yDrawSize3+heightDrawSize3) {
+  if (mouseX>xDrawSize3 && mouseX<xDrawSize3+widthDrawSize3 && mouseY>yDrawSize3 && mouseY<yDrawSize3+heightDrawSize3 && ExitConfirmation==false) {
     DrawVariable1 = -15;
     DrawVariable2 = -15;
-    DrawVariable3 = 30;
+    DrawVariable3 = heightDrawSize3;
   }
-  if (mouseX>xDrawSize4 && mouseX<xDrawSize4+widthDrawSize4 && mouseY>yDrawSize4 && mouseY<yDrawSize4+heightDrawSize4) {
+  if (mouseX>xDrawSize4 && mouseX<xDrawSize4+widthDrawSize4 && mouseY>yDrawSize4 && mouseY<yDrawSize4+heightDrawSize4 && ExitConfirmation==false) {
     DrawVariable1 = -10;
     DrawVariable2 = -10;
-    DrawVariable3 = 20;
+    DrawVariable3 = heightDrawSize4;
   }
-  if (mouseX>xDrawSize5 && mouseX<xDrawSize5+widthDrawSize5 && mouseY>yDrawSize5 && mouseY<yDrawSize5+heightDrawSize5) {
+  if (mouseX>xDrawSize5 && mouseX<xDrawSize5+widthDrawSize5 && mouseY>yDrawSize5 && mouseY<yDrawSize5+heightDrawSize5 && ExitConfirmation==false) {
     DrawVariable1 = -5;
     DrawVariable2 = -5;
-    DrawVariable3 = 10;
+    DrawVariable3 = heightDrawSize5;
   }
   //
 } //End mousePressed
