@@ -81,8 +81,8 @@ void setup() {
   //
   String open = "/";
   String up = "..";
-  String imagesPath = up + open + up + open;
-  String Imagefolder = "Images";
+  String imagesPath = up + open;
+  String Imagefolder = "DrawingProgramImages";
   String QuitImage = "exet.png";
   String EraserImage = "Eraser.png";
   QuitButton = loadImage(imagesPath + Imagefolder + open + QuitImage);
