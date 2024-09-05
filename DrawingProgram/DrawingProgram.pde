@@ -57,6 +57,7 @@ float xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2;
 float xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3;
 float xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4;
 float xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5;
+float xDrawSize6, yDrawSize6, widthDrawSize6, heightDrawSize6;
 float xColorTitle, yColorTitle, widthColorTitle, heightColorTitle;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle;
@@ -121,10 +122,11 @@ void setup() {
   xWidthTitle = appWidth*1/30; yWidthTitle = appHeight*504/1000; widthWidthTitle = appWidth*2/21; heightWidthTitle = appHeight*3/70;
   xWidthSelection = appWidth*1/30; yWidthSelection = appHeight*6/11; widthWidthSelection = appWidth*2/21; heightWidthSelection = appHeight*5/16;
   xDrawSize1 = appWidth*1/25; yDrawSize1 = appHeight*28/50; widthDrawSize1 = appWidth*6/75; heightDrawSize1 = appHeight*5/80;
-  xDrawSize2 = appWidth*1/25; yDrawSize2 = appHeight*45/70; widthDrawSize2 = widthDrawSize1; heightDrawSize2 = appHeight*4/80;
-  xDrawSize3 = appWidth*1/25; yDrawSize3 = appHeight*57/80; widthDrawSize3 = widthDrawSize1; heightDrawSize3 = appHeight*3/80;
-  xDrawSize4 = appWidth*1/25; yDrawSize4 = appHeight*77/100; widthDrawSize4 = widthDrawSize1; heightDrawSize4 = appHeight*2/80;
-  xDrawSize5 = appWidth*1/25; yDrawSize5 = appHeight*163/200; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
+  xDrawSize2 = xDrawSize1; yDrawSize2 = appHeight*45/70; widthDrawSize2 = widthDrawSize1; heightDrawSize2 = appHeight*4/80;
+  xDrawSize3 = xDrawSize1; yDrawSize3 = appHeight*57/80; widthDrawSize3 = widthDrawSize1; heightDrawSize3 = appHeight*3/80;
+  xDrawSize4 = xDrawSize1; yDrawSize4 = appHeight*77/100; widthDrawSize4 = widthDrawSize1; heightDrawSize4 = appHeight*2/80;
+  xDrawSize5 = xDrawSize1; yDrawSize5 = appHeight*163/200; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
+  xDrawSize6 = xDrawSize1; yDrawSize6 = appHeight*169/200; widthDrawSize6 = widthDrawSize1; heightDrawSize6 = appHeight*1/160;
   xNoDrawZone1 = appWidth*1/1000; yNoDrawZone1 = yRectBackground; widthNoDrawZone1 = appWidth*1/6; heightNoDrawZone1 = heightRectBackground;
   xNoDrawZone2 = appWidth*5/6; yNoDrawZone2 = yRectBackground; widthNoDrawZone2 = widthNoDrawZone1; heightNoDrawZone2 = heightRectBackground;
   ColorTextx = appWidth*2/25; ColorTexty = appHeight*113/130; ColorTextwidth = appWidth*2/25; ColorTextheight = heightColorTitle;
@@ -213,6 +215,7 @@ void draw() {
   rect(xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3);
   rect(xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4);
   rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
+  rect(xDrawSize6, yDrawSize6, widthDrawSize6, heightDrawSize6);
   fill(DrawingColor);
   circle(ColorIndicator1, ColorIndicator2, ColorIndicator3);
   fill(ResetDefaultInk);
@@ -279,6 +282,11 @@ void draw() {
   if (mouseX>xDrawSize5 && mouseX<xDrawSize5+widthDrawSize5 && mouseY>yDrawSize5 && mouseY<yDrawSize5+heightDrawSize5) {
     fill(hoverOverColor);
     rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xDrawSize6 && mouseX<xDrawSize6+widthDrawSize6 && mouseY>yDrawSize6 && mouseY<yDrawSize6+heightDrawSize6) {
+    fill(hoverOverColor);
+    rect(xDrawSize6, yDrawSize6, widthDrawSize6, heightDrawSize6);
     fill(ResetDefaultInk);
   }
   if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue) {
@@ -394,6 +402,11 @@ void mousePressed() {
     DrawVariable1 = -5;
     DrawVariable2 = -5;
     DrawVariable3 = heightDrawSize5;
+  }
+  if (mouseX>xDrawSize6 && mouseX<xDrawSize6+widthDrawSize6 && mouseY>yDrawSize6 && mouseY<yDrawSize6+heightDrawSize6 && ExitConfirmation==false) {
+    DrawVariable1 = -2.5;
+    DrawVariable2 = -2.5;
+    DrawVariable3 = heightDrawSize6;
   }
   //
 } //End mousePressed
