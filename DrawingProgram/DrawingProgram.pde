@@ -11,7 +11,7 @@ String Yes = "Yes";
 String No = "No";
 String Erase = "Erase all";
 String Question = "Are you sure you would like to quit?";
-String Question2 = "Are you sure you want to erase all?";
+String EraseQuestion = "Are you sure you want to erase all?";
 color DarkGreen=#02B703;
 color DarkRed=#AA021B;
 color LightGray=#EAE8E8;
@@ -75,6 +75,7 @@ float WidthIndicator1, WidthIndicator2;
 int appWidth, appHeight;
 int size;
 Boolean ExitConfirmation=false;
+Boolean EraseConfirmation=false;
 //
 void setup() {
   //
