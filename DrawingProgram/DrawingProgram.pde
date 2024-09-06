@@ -34,6 +34,10 @@ float ConfirmationBackgroundx, ConfirmationBackgroundy, ConfirmationBackgroundwi
 float xConfirmationYes, yConfirmationYes, widthConfirmationYes, heightConfirmationYes;
 float xConfirmationNo, yConfirmationNo, widthConfirmationNo, heightConfirmationNo;
 float xConfirmationQuestion, yConfirmationQuestion, widthConfirmationQuestion, heightConfirmationQuestion;
+float EraseConfirmationBackgroundx, EraseConfirmationBackgroundy, EraseConfirmationBackgroundwidth,EraseConfirmationBackgroundheight;
+float xEraseConfirmationYes, yEraseConfirmationYes, widthEraseConfirmationYes, heightEraseConfirmationYes;
+float xEraseConfirmationNo, yEraseConfirmationNo, widthEraseConfirmationNo, heightEraseConfirmationNo;
+float xEraseConfirmationQuestion, yEraseConfirmationQuestion, widthEraseConfirmationQuestion, heightEraseConfirmationQuestion;
 float xWidth1, yWidth1, widthWidth1, heightWidth1;
 float xRectBackground, yRectBackground, widthRectBackground, heightRectBackground;
 float xRectQuit, yRectQuit, widthRectQuit, heightRectQuit;
