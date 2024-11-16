@@ -62,6 +62,7 @@ float xDrawSize3, yDrawSize3, widthDrawSize3, heightDrawSize3;
 float xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4;
 float xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5;
 float xDrawSize6, yDrawSize6, widthDrawSize6, heightDrawSize6;
+float xDrawSize7, yDrawSize7, widthDrawSize7, heightDrawSize7;
 float xColorTitle, yColorTitle, widthColorTitle, heightColorTitle;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle;
@@ -108,31 +109,32 @@ void setup() {
   xConfirmationNo = appWidth*11/12; yConfirmationNo = yConfirmationYes; widthConfirmationNo = widthConfirmationYes; heightConfirmationNo = heightConfirmationYes;
   xConfirmationQuestion = appWidth*41/48; yConfirmationQuestion = appHeight*1/10; widthConfirmationQuestion = appWidth*6/48; heightConfirmationQuestion = appHeight*3/26;
   //
-  xColorTitle = appWidth*1/30; yColorTitle = appHeight*1/20; widthColorTitle = appWidth*2/21; heightColorTitle = appHeight*3/70;
-  xColorSelection = appWidth*1/30; yColorSelection = appHeight*1/11; widthColorSelection = appWidth*2/21; heightColorSelection = appHeight*5/16; 
-  xBlue = appWidth*1/25; yBlue = appHeight*1/10; widthBlue = appWidth*2/70; heightBlue = appHeight*3/70;
-  xGreen = appWidth*1/11; yGreen = appHeight*1/10; widthGreen = widthBlue; heightGreen = heightBlue;
-  xRed = appWidth*1/25; yRed = appHeight*3/20; widthRed = widthBlue; heightRed = heightBlue;
-  xYellow = appWidth*1/11; yYellow = yRed; widthYellow = widthBlue; heightYellow = heightBlue;
-  xCyan = appWidth*1/25; yCyan = appHeight*4/20; widthCyan = widthBlue; heightCyan = heightBlue;
-  xPurple = appWidth*1/11; yPurple = appHeight*4/20; widthPurple = widthBlue; heightPurple = heightBlue;
-  xBrown = appWidth*1/25; yBrown = appHeight*5/20; widthBrown = widthBlue; heightBrown = heightBlue;
-  xMagenta = appWidth*1/11; yMagenta = appHeight*5/20; widthMagenta = widthBlue; heightMagenta = heightBlue;
-  xOrange = appWidth*1/25; yOrange = appHeight*6/20; widthOrange = widthBlue; heightOrange = heightBlue;
-  xNavy = appWidth*1/11; yNavy = appHeight*6/20; widthNavy = widthBlue; heightNavy = heightBlue;
-  xGray = appWidth*1/25; yGray = appHeight*7/20; widthGray = widthBlue; heightGray = heightBlue;
-  xBlack = appWidth*1/11; yBlack = appHeight*7/20; widthBlack = widthBlue; heightBlack = heightBlue;
-  xErase = appWidth*1/18; yErase = appHeight*1/11+appHeight*5/16; widthErase = appWidth*1/21; heightErase = appHeight*1/13;
+  xColorTitle = appWidth*0; yColorTitle = appHeight*0; widthColorTitle = appWidth*1/12; heightColorTitle = appHeight*3/70;
+  xColorSelection = appWidth*0; yColorSelection = appHeight*3/70; widthColorSelection = appWidth*1/12; heightColorSelection = appHeight*5/16; 
+  xBlue = appWidth*3/280; yBlue = appHeight*4/70; widthBlue = appWidth*2/70; heightBlue = appHeight*3/70;
+  xGreen = appWidth*6/140; yGreen = appHeight*4/70; widthGreen = widthBlue; heightGreen = heightBlue;
+  xRed = xBlue; yRed = appHeight*15/140; widthRed = widthBlue; heightRed = heightBlue;
+  xYellow = xGreen; yYellow = yRed; widthYellow = widthBlue; heightYellow = heightBlue;
+  xCyan = xBlue; yCyan = appHeight*22/140; widthCyan = widthBlue; heightCyan = heightBlue;
+  xPurple = xGreen; yPurple = yCyan; widthPurple = widthBlue; heightPurple = heightBlue;
+  xBrown = xBlue; yBrown = appHeight*29/140; widthBrown = widthBlue; heightBrown = heightBlue;
+  xMagenta = xGreen; yMagenta = yBrown; widthMagenta = widthBlue; heightMagenta = heightBlue;
+  xOrange = xBlue; yOrange = appHeight*36/140; widthOrange = widthBlue; heightOrange = heightBlue;
+  xNavy = xGreen; yNavy = yOrange; widthNavy = widthBlue; heightNavy = heightBlue;
+  xGray = xBlue; yGray = appHeight*43/140; widthGray = widthBlue; heightGray = heightBlue;
+  xBlack = xGreen; yBlack = yGray; widthBlack = widthBlue; heightBlack = heightBlue;
+  xErase = widthColorSelection*1/3; yErase = heightColorSelection+heightColorTitle; widthErase = appWidth*1/32; heightErase = appHeight*1/20;
   //
-  xWidthTitle = appWidth*1/30; yWidthTitle = appHeight*504/1000; widthWidthTitle = appWidth*2/21; heightWidthTitle = appHeight*3/70;
-  xWidthSelection = appWidth*1/30; yWidthSelection = appHeight*6/11; widthWidthSelection = appWidth*2/21; heightWidthSelection = appHeight*5/16;
-  xDrawSize1 = appWidth*1/25; yDrawSize1 = appHeight*28/50; widthDrawSize1 = appWidth*6/75; heightDrawSize1 = appHeight*5/80;
-  xDrawSize2 = xDrawSize1; yDrawSize2 = appHeight*45/70; widthDrawSize2 = widthDrawSize1; heightDrawSize2 = appHeight*4/80;
-  xDrawSize3 = xDrawSize1; yDrawSize3 = appHeight*57/80; widthDrawSize3 = widthDrawSize1; heightDrawSize3 = appHeight*3/80;
-  xDrawSize4 = xDrawSize1; yDrawSize4 = appHeight*77/100; widthDrawSize4 = widthDrawSize1; heightDrawSize4 = appHeight*2/80;
-  xDrawSize5 = xDrawSize1; yDrawSize5 = appHeight*163/200; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
-  xDrawSize6 = xDrawSize1; yDrawSize6 = appHeight*169/200; widthDrawSize6 = widthDrawSize1; heightDrawSize6 = appHeight*1/160;
-  xNoDrawZone1 = appWidth*1/1000; yNoDrawZone1 = yRectBackground; widthNoDrawZone1 = appWidth*1/6; heightNoDrawZone1 = heightRectBackground;
+  xWidthTitle = appWidth*0; yWidthTitle = heightColorSelection+heightColorTitle+heightErase*1/2; widthWidthTitle = appWidth*1/12; heightWidthTitle = appHeight*3/70;
+  xWidthSelection = xWidthTitle; yWidthSelection = appHeight*15/140+heightColorSelection; widthWidthSelection = widthWidthTitle; heightWidthSelection = appHeight*5/16;
+  xDrawSize1 = appWidth*1/140; yDrawSize1 = appHeight*3/7; widthDrawSize1 = appWidth*10/150+xDrawSize1*1/2; heightDrawSize1 = appHeight*5/80;
+  xDrawSize2 = xDrawSize1; yDrawSize2 = appHeight*1/2; widthDrawSize2 = widthDrawSize1; heightDrawSize2 = appHeight*4/80;
+  xDrawSize3 = xDrawSize1; yDrawSize3 = appHeight*81/144; widthDrawSize3 = widthDrawSize1; heightDrawSize3 = appHeight*3/80;
+  xDrawSize4 = xDrawSize1; yDrawSize4 = appHeight*8/13; widthDrawSize4 = widthDrawSize1; heightDrawSize4 = appHeight*2/80;
+  xDrawSize5 = xDrawSize1; yDrawSize5 = appHeight*17/26; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
+  xDrawSize6 = xDrawSize1; yDrawSize6 = appHeight*136/200; widthDrawSize6 = widthDrawSize1; heightDrawSize6 = appHeight*1/160;
+  xDrawSize7 = xDrawSize1; yDrawSize7 = appHeight*7/10; widthDrawSize7 = widthDrawSize1; heightDrawSize7 = appHeight*1/320;
+  xNoDrawZone1 = appWidth*0; yNoDrawZone1 = yRectBackground; widthNoDrawZone1 = appWidth*1/6; heightNoDrawZone1 = heightRectBackground;
   xNoDrawZone2 = appWidth*5/6; yNoDrawZone2 = yRectBackground; widthNoDrawZone2 = widthNoDrawZone1; heightNoDrawZone2 = heightRectBackground;
   ColorTextx = appWidth*2/25; ColorTexty = appHeight*113/130; ColorTextwidth = appWidth*2/25; ColorTextheight = heightColorTitle;
   WidthTextx = appWidth*1/600; WidthTexty = ColorTexty; WidthTextwidth = appWidth*2/25; WidthTextheight = heightWidthTitle;
@@ -210,9 +212,9 @@ void draw() {
   fill(Black);
   rect(xBlack, yBlack, widthBlack, heightBlack);
   fill(LightGray);
-  rect(xErase, yErase, widthErase, heightErase);
-  fill(ResetDefaultInk);
-  image(EraseButton, xErase, yErase, widthErase, heightErase);
+  //rect(xErase, yErase, widthErase, heightErase);
+  //fill(ResetDefaultInk);
+  //image(EraseButton, xErase, yErase, widthErase, heightErase);
   fill(Black);
   circle(WidthIndicator1, WidthIndicator2, DrawVariable3);
   rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1); 
@@ -221,6 +223,7 @@ void draw() {
   rect(xDrawSize4, yDrawSize4, widthDrawSize4, heightDrawSize4);
   rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
   rect(xDrawSize6, yDrawSize6, widthDrawSize6, heightDrawSize6);
+  rect(xDrawSize7, yDrawSize7, widthDrawSize7, heightDrawSize7);
   fill(DrawingColor);
   circle(ColorIndicator1, ColorIndicator2, ColorIndicator3);
   fill(ResetDefaultInk);
@@ -292,6 +295,11 @@ void draw() {
   if (mouseX>xDrawSize6 && mouseX<xDrawSize6+widthDrawSize6 && mouseY>yDrawSize6 && mouseY<yDrawSize6+heightDrawSize6) {
     fill(hoverOverColor);
     rect(xDrawSize6, yDrawSize6, widthDrawSize6, heightDrawSize6);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xDrawSize7 && mouseX<xDrawSize7+widthDrawSize7 && mouseY>yDrawSize7 && mouseY<yDrawSize7+heightDrawSize7) {
+    fill(hoverOverColor);
+    rect(xDrawSize7, yDrawSize7, widthDrawSize7, heightDrawSize7);
     fill(ResetDefaultInk);
   }
   if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue) {
@@ -412,6 +420,11 @@ void mousePressed() {
     DrawVariable1 = -2.5;
     DrawVariable2 = -2.5;
     DrawVariable3 = heightDrawSize6;
+  }
+  if (mouseX>xDrawSize7 && mouseX<xDrawSize7+widthDrawSize7 && mouseY>yDrawSize7 && mouseY<yDrawSize7+heightDrawSize7 && ExitConfirmation==false) {
+    DrawVariable1 = -1.25;
+    DrawVariable2 = -1.25;
+    DrawVariable3 = heightDrawSize7;
   }
   //
 } //End mousePressed
