@@ -5,6 +5,7 @@ PFont GeneralFont;
 PFont TitleFont;
 String Colors = "Drawing Colors";
 String Width = "Drawing Width";
+String Shape = "Shape Selection";
 String Selection = "Selected Color";
 String Selection2 = "Selected Width";
 String Yes = "Yes";
@@ -29,6 +30,7 @@ color Navy=#09629B;
 color Gray=#AFAFAF;
 color Black=#000000;
 color DrawingColor=#000000;
+color StrokeColor=DrawingColor;
 color ErasingColor=ResetDefaultInk;
 float ConfirmationBackgroundx, ConfirmationBackgroundy, ConfirmationBackgroundwidth, ConfirmationBackgroundheight;
 float xConfirmationYes, yConfirmationYes, widthConfirmationYes, heightConfirmationYes;
@@ -67,6 +69,8 @@ float xColorTitle, yColorTitle, widthColorTitle, heightColorTitle;
 float xColorSelection, yColorSelection, widthColorSelection, heightColorSelection;
 float xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
+float xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle;
+float xShapeSelection, yShapeSelection, widthShapeSelection, heightShapeSelection;
 float DrawVariable1, DrawVariable2, DrawVariable3;
 float EraseVariable1, EraseVariable2;
 float ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight;
@@ -77,6 +81,9 @@ int appWidth, appHeight;
 int size;
 Boolean ExitConfirmation=false;
 Boolean EraseConfirmation=false;
+Boolean DrawSquare=false;
+Boolean DrawCircle=false;
+Boolean DrawTriangle=false;
 //
 void setup() {
   //
@@ -139,6 +146,9 @@ void setup() {
   ColorTextx = appWidth*2/25; ColorTexty = appHeight*113/130; ColorTextwidth = appWidth*2/25; ColorTextheight = heightColorTitle;
   WidthTextx = appWidth*1/600; WidthTexty = ColorTexty; WidthTextwidth = appWidth*2/25; WidthTextheight = heightWidthTitle;
   //
+  xShapeSelection = appWidth*1/12; yShapeSelection = yWidthSelection; widthShapeSelection = widthWidthSelection; heightShapeSelection = heightWidthSelection;
+  xShapeTitle = xShapeSelection; yShapeTitle = yWidthTitle; widthShapeTitle = widthWidthTitle; heightShapeTitle = heightWidthTitle;
+  //
   ColorIndicator1 = appWidth*3/25;
   ColorIndicator2 = appHeight*95/100;
   ColorIndicator3 = appWidth*1/25;
@@ -161,7 +171,8 @@ void setup() {
 void draw() {
   //
   if(mouseButton == LEFT && ExitConfirmation==false){
-    noStroke();
+    stroke(StrokeColor);
+    strokeWeight(1);
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
     fill(DrawingColor);
     rect(mouseX+DrawVariable1, mouseY+DrawVariable2, DrawVariable3, DrawVariable3);
@@ -171,7 +182,7 @@ void draw() {
     fill(ResetDefaultInk);
     noStroke();
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
-    rect(mouseX-45, mouseY-45, 90, 90);
+    circle(mouseX, mouseY, 90);
     fill(ResetDefaultInk);
   }
   stroke(1);
@@ -183,9 +194,11 @@ void draw() {
   image(QuitButton, xRectQuit, yRectQuit, widthRectQuit, heightRectQuit);
   rect(xColorTitle, yColorTitle, widthColorTitle, heightColorTitle);
   rect(xColorSelection, yColorSelection, widthColorSelection, heightColorSelection);
-  rect(ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight);
   rect(xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
+  rect(xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle);
+  rect(xShapeSelection, yShapeSelection, widthShapeSelection, heightShapeSelection);
+  rect(ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight);
   rect(WidthTextx, WidthTexty, WidthTextwidth, WidthTextheight);
   fill(Blue);
   rect(xBlue, yBlue, widthBlue, heightBlue);
@@ -240,6 +253,13 @@ void draw() {
   size = 20;
   textFont(TitleFont, size); 
   text(Width, xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle);
+  fill(ResetDefaultInk);
+  //
+  fill(Black);
+  textAlign(CENTER, CENTER); 
+  size = 20;
+  textFont(TitleFont, size); 
+  text(Shape, xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle);
   fill(ResetDefaultInk);
   //
   fill(DrawingColor);
