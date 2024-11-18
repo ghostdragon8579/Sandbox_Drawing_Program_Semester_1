@@ -105,4 +105,64 @@ void HoverOverColor () {
     rect(xBlack, yBlack, widthBlack, heightBlack);
     fill(ResetDefaultInk);
   }
+  if (mouseX>xStrokeBlue && mouseX<xStrokeBlue+widthStrokeBlue && mouseY>yStrokeBlue && mouseY<yStrokeBlue+heightStrokeBlue) {
+    fill(hoverOverColor);
+    rect(xStrokeBlue, yStrokeBlue, widthStrokeBlue, heightStrokeBlue);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeGreen && mouseX<xStrokeGreen+widthStrokeGreen && mouseY>yStrokeGreen && mouseY<yStrokeGreen+heightStrokeGreen) {
+    fill(hoverOverColor);
+    rect(xStrokeGreen, yStrokeGreen, widthStrokeGreen, heightStrokeGreen);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeRed && mouseX<xStrokeRed+widthStrokeRed && mouseY>yStrokeRed && mouseY<yStrokeRed+heightStrokeRed) {
+    fill(hoverOverColor);
+    rect(xStrokeRed, yStrokeRed, widthStrokeRed, heightStrokeRed);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeYellow && mouseX<xStrokeYellow+widthStrokeYellow && mouseY>yStrokeYellow && mouseY<yStrokeYellow+heightStrokeYellow) {
+    fill(hoverOverColor);
+    rect(xStrokeYellow, yStrokeYellow, widthStrokeYellow, heightStrokeYellow);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeCyan && mouseX<xStrokeCyan+widthStrokeCyan && mouseY>yStrokeCyan && mouseY<yStrokeCyan+heightStrokeCyan) {
+    fill(hoverOverColor);
+    rect(xStrokeCyan, yStrokeCyan, widthStrokeCyan, heightStrokeCyan);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokePurple && mouseX<xStrokePurple+widthStrokePurple && mouseY>yStrokePurple && mouseY<yStrokePurple+heightStrokePurple) {
+    fill(hoverOverColor);
+    rect(xStrokePurple, yStrokePurple, widthStrokePurple, heightStrokePurple);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeBrown && mouseX<xStrokeBrown+widthStrokeBrown && mouseY>yStrokeBrown && mouseY<yStrokeBrown+heightStrokeBrown) {
+    fill(hoverOverColor);
+    rect(xStrokeBrown, yStrokeBrown, widthStrokeBrown, heightStrokeBrown);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeMagenta && mouseX<xStrokeMagenta+widthStrokeMagenta && mouseY>yStrokeMagenta && mouseY<yStrokeMagenta+heightStrokeMagenta) {
+    fill(hoverOverColor);
+    rect(xStrokeMagenta, yStrokeMagenta, widthStrokeMagenta, heightStrokeMagenta);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeOrange && mouseX<xStrokeOrange+widthStrokeOrange && mouseY>yStrokeOrange && mouseY<yStrokeOrange+heightStrokeOrange) {
+    fill(hoverOverColor);
+    rect(xStrokeOrange, yStrokeOrange, widthStrokeOrange, heightStrokeOrange);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeNavy && mouseX<xStrokeNavy+widthStrokeNavy && mouseY>yStrokeNavy && mouseY<yStrokeNavy+heightStrokeNavy) {
+    fill(hoverOverColor);
+    rect(xStrokeNavy, yStrokeNavy, widthStrokeNavy, heightStrokeNavy);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeGray && mouseX<xStrokeGray+widthStrokeGray && mouseY>yStrokeGray && mouseY<yStrokeGray+heightStrokeGray) {
+    fill(hoverOverColor);
+    rect(xStrokeGray, yStrokeGray, widthStrokeGray, heightStrokeGray);
+    fill(ResetDefaultInk);
+  }
+  if (mouseX>xStrokeBlack && mouseX<xStrokeBlack+widthStrokeBlack && mouseY>yStrokeBlack && mouseY<yStrokeBlack+heightStrokeBlack) {
+    fill(hoverOverColor);
+    rect(xStrokeBlack, yStrokeBlack, widthStrokeBlack, heightStrokeBlack);
+    fill(ResetDefaultInk);
+  }
 }
