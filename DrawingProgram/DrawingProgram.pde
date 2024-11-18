@@ -6,6 +6,7 @@ PFont TitleFont;
 String Colors = "Drawing Colors";
 String Width = "Drawing Width";
 String Shape = "Shape Selection";
+String OutlineColor = "Outline Colors";
 String Selection = "Selected Color";
 String Selection2 = "Selected Width";
 String Yes = "Yes";
@@ -71,6 +72,8 @@ float xWidthTitle, yWidthTitle, widthWidthTitle, heightWidthTitle;
 float xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection;
 float xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle;
 float xShapeSelection, yShapeSelection, widthShapeSelection, heightShapeSelection;
+float xStrokeTitle, yStrokeTitle, widthStrokeTitle, heightStrokeTitle;
+float xStrokeSelection, yStrokeSelection, widthStrokeSelection, heightStrokeSelection;
 float DrawVariable1, DrawVariable2, DrawVariable3;
 float EraseVariable1, EraseVariable2;
 float ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight;
@@ -132,6 +135,9 @@ void setup() {
   xBlack = xGreen; yBlack = yGray; widthBlack = widthBlue; heightBlack = heightBlue;
   xErase = widthColorSelection*1/3; yErase = heightColorSelection+heightColorTitle; widthErase = appWidth*1/32; heightErase = appHeight*1/20;
   //
+  xStrokeTitle = appWidth*1/12; yStrokeTitle = yColorTitle; widthStrokeTitle = widthColorTitle; heightStrokeTitle = heightColorTitle;
+  xStrokeSelection = xStrokeTitle; yStrokeSelection = yColorSelection; widthStrokeSelection = widthStrokeTitle; heightStrokeSelection = heightColorSelection;
+  //
   xWidthTitle = appWidth*0; yWidthTitle = heightColorSelection+heightColorTitle+heightErase*1/2; widthWidthTitle = appWidth*1/12; heightWidthTitle = appHeight*3/70;
   xWidthSelection = xWidthTitle; yWidthSelection = appHeight*15/140+heightColorSelection; widthWidthSelection = widthWidthTitle; heightWidthSelection = appHeight*5/16;
   xDrawSize1 = appWidth*1/140; yDrawSize1 = appHeight*3/7; widthDrawSize1 = appWidth*10/150+xDrawSize1*1/2; heightDrawSize1 = appHeight*5/80;
@@ -146,8 +152,8 @@ void setup() {
   ColorTextx = appWidth*2/25; ColorTexty = appHeight*113/130; ColorTextwidth = appWidth*2/25; ColorTextheight = heightColorTitle;
   WidthTextx = appWidth*1/600; WidthTexty = ColorTexty; WidthTextwidth = appWidth*2/25; WidthTextheight = heightWidthTitle;
   //
-  xShapeSelection = appWidth*1/12; yShapeSelection = yWidthSelection; widthShapeSelection = widthWidthSelection; heightShapeSelection = heightWidthSelection;
-  xShapeTitle = xShapeSelection; yShapeTitle = yWidthTitle; widthShapeTitle = widthWidthTitle; heightShapeTitle = heightWidthTitle;
+  xShapeTitle = appWidth*1/12; yShapeTitle = yWidthTitle; widthShapeTitle = widthWidthTitle; heightShapeTitle = heightWidthTitle;
+  xShapeSelection = xShapeTitle; yShapeSelection = yWidthSelection; widthShapeSelection = widthWidthSelection; heightShapeSelection = heightWidthSelection;
   //
   ColorIndicator1 = appWidth*3/25;
   ColorIndicator2 = appHeight*95/100;
@@ -198,6 +204,8 @@ void draw() {
   rect(xWidthSelection, yWidthSelection, widthWidthSelection, heightWidthSelection);
   rect(xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle);
   rect(xShapeSelection, yShapeSelection, widthShapeSelection, heightShapeSelection);
+  rect(xStrokeTitle, yStrokeTitle, widthStrokeTitle, heightStrokeTitle);
+  rect(xStrokeSelection, yStrokeSelection, widthStrokeSelection, heightStrokeSelection);
   rect(ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight);
   rect(WidthTextx, WidthTexty, WidthTextwidth, WidthTextheight);
   fill(Blue);
@@ -260,6 +268,13 @@ void draw() {
   size = 20;
   textFont(TitleFont, size); 
   text(Shape, xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle);
+  fill(ResetDefaultInk);
+  //
+  fill(Black);
+  textAlign(CENTER, CENTER); 
+  size = 20;
+  textFont(TitleFont, size); 
+  text(OutlineColor, xStrokeTitle, yStrokeTitle, widthStrokeTitle, heightStrokeTitle);
   fill(ResetDefaultInk);
   //
   fill(DrawingColor);
