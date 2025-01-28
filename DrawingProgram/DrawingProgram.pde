@@ -150,8 +150,8 @@ void setup() {
   //
   xStrokeTitle = appWidth*1/12; yStrokeTitle = yColorTitle; widthStrokeTitle = widthColorTitle; heightStrokeTitle = heightColorTitle;
   xStrokeSelection = xStrokeTitle; yStrokeSelection = yColorSelection; widthStrokeSelection = widthStrokeTitle; heightStrokeSelection = heightColorSelection;
-  xStrokeBlue = appWidth*1/12+appWidth*3/280; yStrokeBlue = yBlue; widthStrokeBlue = widthBlue; heightStrokeBlue = heightBlue;
-  xStrokeGreen = appWidth*1/12+appWidth*6/140; yStrokeGreen = yGreen; widthStrokeGreen = widthGreen; heightStrokeGreen = heightGreen;
+  xStrokeBlue = widthStrokeSelection*1/7+widthStrokeSelection; yStrokeBlue = yBlue; widthStrokeBlue = widthBlue; heightStrokeBlue = heightBlue;
+  xStrokeGreen = widthStrokeSelection*4/7+widthStrokeSelection; yStrokeGreen = yGreen; widthStrokeGreen = widthGreen; heightStrokeGreen = heightGreen;
   xStrokeRed = xStrokeBlue; yStrokeRed = yRed; widthStrokeRed = widthRed; heightStrokeRed = heightRed;
   xStrokeYellow = xStrokeGreen; yStrokeYellow = yYellow; widthStrokeYellow = widthYellow; heightStrokeYellow = heightYellow;
   xStrokeCyan = xStrokeBlue; yStrokeCyan = yCyan; widthStrokeCyan = widthCyan; heightStrokeCyan = heightCyan;
@@ -272,12 +272,9 @@ void draw() {
   fill(Black);
   rect(xBlack, yBlack, widthBlack, heightBlack);
   rect(xStrokeBlack, yStrokeBlack, widthStrokeBlack, heightStrokeBlack);
-  fill(LightGray);
+  fill(ResetDefaultInk);
   rect(xErase, yErase, widthErase, heightErase);
   rect(xStrokeErase, yStrokeErase, widthStrokeErase, heightStrokeErase);
-  fill(ResetDefaultInk);
-  image(EraseButton, xErase, yErase, widthErase, heightErase);
-  image(EraseButton, xStrokeErase, yStrokeErase, widthStrokeErase, heightStrokeErase);
   fill(Black);
   rect(xDrawSize1, yDrawSize1, widthDrawSize1, heightDrawSize1); 
   rect(xDrawSize2, yDrawSize2, widthDrawSize2, heightDrawSize2);
