@@ -165,4 +165,9 @@ void HoverOverColor () {
     rect(xStrokeBlack, yStrokeBlack, widthStrokeBlack, heightStrokeBlack);
     fill(ResetDefaultInk);
   }
+    if (mouseX>xStrokeErase && mouseX<xStrokeErase+widthStrokeErase && mouseY>yStrokeErase && mouseY<yStrokeErase+heightStrokeErase) {
+    fill(hoverOverColor);
+    rect(xStrokeErase, yStrokeErase, widthStrokeErase, heightStrokeErase);
+    fill(ResetDefaultInk);
+  }
 }
