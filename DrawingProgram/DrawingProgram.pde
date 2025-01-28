@@ -133,7 +133,7 @@ void setup() {
   xConfirmationQuestion = appWidth*41/48; yConfirmationQuestion = appHeight*1/10; widthConfirmationQuestion = appWidth*6/48; heightConfirmationQuestion = appHeight*3/26;
   //
   xColorTitle = appWidth*0; yColorTitle = appHeight*0; widthColorTitle = appWidth*1/12; heightColorTitle = appHeight*3/70;
-  xColorSelection = appWidth*0; yColorSelection = appHeight*3/70; widthColorSelection = appWidth*1/12; heightColorSelection = appHeight*5/16; 
+  xColorSelection = appWidth*0; yColorSelection = appHeight*3/70; widthColorSelection = appWidth*1/12; heightColorSelection = appHeight*47/128; 
   xBlue = widthColorSelection*1/7; yBlue = appHeight*4/70; widthBlue = widthColorSelection*1/3; heightBlue = appHeight*3/70;
   xGreen = widthColorSelection*4/7; yGreen = appHeight*4/70; widthGreen = widthBlue; heightGreen = heightBlue;
   xRed = xBlue; yRed = appHeight*15/140; widthRed = widthBlue; heightRed = heightBlue;
@@ -146,7 +146,7 @@ void setup() {
   xNavy = xGreen; yNavy = yOrange; widthNavy = widthBlue; heightNavy = heightBlue;
   xGray = xBlue; yGray = appHeight*43/140; widthGray = widthBlue; heightGray = heightBlue;
   xBlack = xGreen; yBlack = yGray; widthBlack = widthBlue; heightBlack = heightBlue;
-  xErase = widthColorSelection*1/3; yErase = heightColorSelection+heightColorTitle; widthErase = widthBlue; heightErase = heightBlue;
+  xErase = widthColorSelection*1/3; yErase = heightColorSelection-appHeight*1/140; widthErase = widthBlue; heightErase = heightBlue;
   //
   xStrokeTitle = appWidth*1/12; yStrokeTitle = yColorTitle; widthStrokeTitle = widthColorTitle; heightStrokeTitle = heightColorTitle;
   xStrokeSelection = xStrokeTitle; yStrokeSelection = yColorSelection; widthStrokeSelection = widthStrokeTitle; heightStrokeSelection = heightColorSelection;
@@ -164,15 +164,15 @@ void setup() {
   xStrokeBlack = xStrokeGreen; yStrokeBlack = yBlack; widthStrokeBlack = widthBlack; heightStrokeBlack = heightBlack;
   xStrokeErase = widthStrokeSelection+widthStrokeSelection*1/3; yStrokeErase = yErase; widthStrokeErase = widthStrokeBlue; heightStrokeErase = heightStrokeBlue;
   //
-  xWidthTitle = appWidth*0; yWidthTitle = heightColorSelection+heightColorTitle+heightErase*1.5; widthWidthTitle = appWidth*1/12; heightWidthTitle = appHeight*3/70;
-  xWidthSelection = xWidthTitle; yWidthSelection = appHeight*15/140+heightColorSelection+heightErase; widthWidthSelection = widthWidthTitle; heightWidthSelection = appHeight*5/16;
-  xDrawSize1 = appWidth*1/140; yDrawSize1 = appHeight*3/7+heightErase; widthDrawSize1 = appWidth*10/150+xDrawSize1*1/2; heightDrawSize1 = appHeight*5/80;
-  xDrawSize2 = xDrawSize1; yDrawSize2 = appHeight*1/2+heightErase; widthDrawSize2 = widthDrawSize1; heightDrawSize2 = appHeight*4/80;
-  xDrawSize3 = xDrawSize1; yDrawSize3 = appHeight*81/144+heightErase; widthDrawSize3 = widthDrawSize1; heightDrawSize3 = appHeight*3/80;
-  xDrawSize4 = xDrawSize1; yDrawSize4 = appHeight*8/13+heightErase; widthDrawSize4 = widthDrawSize1; heightDrawSize4 = appHeight*2/80;
-  xDrawSize5 = xDrawSize1; yDrawSize5 = appHeight*17/26+heightErase; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
-  xDrawSize6 = xDrawSize1; yDrawSize6 = appHeight*136/200+heightErase; widthDrawSize6 = widthDrawSize1; heightDrawSize6 = appHeight*1/160;
-  xDrawSize7 = xDrawSize1; yDrawSize7 = appHeight*7/10+heightErase; widthDrawSize7 = widthDrawSize1; heightDrawSize7 = appHeight*1/320;
+  xWidthTitle = appWidth*0; yWidthTitle = appHeight*15/140+appHeight*5/16; widthWidthTitle = appWidth*1/12; heightWidthTitle = appHeight*3/70;
+  xWidthSelection = xWidthTitle; yWidthSelection = appHeight*15/140+appHeight*5/16+heightErase; widthWidthSelection = widthWidthTitle; heightWidthSelection = appHeight*5/16;
+  xDrawSize1 = appWidth*1/140; yDrawSize1 = appHeight*3/7+heightWidthTitle; widthDrawSize1 = appWidth*10/150+xDrawSize1*1/2; heightDrawSize1 = appHeight*5/80;
+  xDrawSize2 = xDrawSize1; yDrawSize2 = appHeight*1/2+heightWidthTitle; widthDrawSize2 = widthDrawSize1; heightDrawSize2 = appHeight*4/80;
+  xDrawSize3 = xDrawSize1; yDrawSize3 = appHeight*81/144+heightWidthTitle; widthDrawSize3 = widthDrawSize1; heightDrawSize3 = appHeight*3/80;
+  xDrawSize4 = xDrawSize1; yDrawSize4 = appHeight*8/13+heightWidthTitle; widthDrawSize4 = widthDrawSize1; heightDrawSize4 = appHeight*2/80;
+  xDrawSize5 = xDrawSize1; yDrawSize5 = appHeight*17/26+heightWidthTitle; widthDrawSize5 = widthDrawSize1; heightDrawSize5 = appHeight*1/80;
+  xDrawSize6 = xDrawSize1; yDrawSize6 = appHeight*136/200+heightWidthTitle; widthDrawSize6 = widthDrawSize1; heightDrawSize6 = appHeight*1/160;
+  xDrawSize7 = xDrawSize1; yDrawSize7 = appHeight*7/10+heightWidthTitle; widthDrawSize7 = widthDrawSize1; heightDrawSize7 = appHeight*1/320;
   //
   xShapeTitle = appWidth*1/12; yShapeTitle = yWidthTitle; widthShapeTitle = widthWidthTitle; heightShapeTitle = heightWidthTitle;
   xShapeSelection = xShapeTitle; yShapeSelection = yWidthSelection; widthShapeSelection = widthWidthSelection; heightShapeSelection = heightWidthSelection;
