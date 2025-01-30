@@ -205,8 +205,7 @@ void draw() {
   //
   if(mouseButton == LEFT && ExitConfirmation==false){
     stroke(StrokeColor);
-    strokeWeight(2.5);
-    noStroke();
+    strokeWeight(2);
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
     fill(DrawingColor);
     rect(mouseX+DrawVariable1, mouseY+DrawVariable2, DrawVariable3, DrawVariable3);
