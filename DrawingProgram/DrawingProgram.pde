@@ -204,8 +204,8 @@ void setup() {
 void draw() {
   //
   if(mouseButton == LEFT && ExitConfirmation==false){
-    //stroke(StrokeColor);
-    //strokeWeight(1);
+    stroke(StrokeColor);
+    strokeWeight(1);
     noStroke();
     if (mouseX>xRectBackground && mouseX<xRectBackground+widthRectBackground && mouseY>yRectBackground && mouseY<yRectBackground+heightRectBackground)
     fill(DrawingColor);
@@ -346,6 +346,20 @@ void mousePressed() {
   if (mouseX>xRectQuit && mouseX<xRectQuit+widthRectQuit && mouseY>yRectQuit && mouseY<yRectQuit+heightRectQuit) ExitConfirmation=true;
   if (mouseX>xConfirmationNo && mouseX<xConfirmationNo+widthConfirmationNo && mouseY>yConfirmationNo && mouseY<yConfirmationNo+heightConfirmationNo) ExitConfirmation=false;
   if (mouseX>xConfirmationYes && mouseX<xConfirmationYes+widthConfirmationYes && mouseY>yConfirmationYes && mouseY<yConfirmationYes+heightConfirmationYes && ExitConfirmation==true) exit();
+  if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue && ExitConfirmation==false) DrawingColor=Blue;
+  if (mouseX>xGreen && mouseX<xGreen+widthGreen && mouseY>yGreen && mouseY<yGreen+heightGreen && ExitConfirmation==false) DrawingColor=Green;
+  if (mouseX>xRed && mouseX<xRed+widthRed && mouseY>yRed && mouseY<yRed+heightRed && ExitConfirmation==false) DrawingColor=Red;
+  if (mouseX>xYellow && mouseX<xYellow+widthYellow && mouseY>yYellow && mouseY<yYellow+heightYellow && ExitConfirmation==false) DrawingColor=Yellow;
+  if (mouseX>xCyan && mouseX<xCyan+widthCyan && mouseY>yCyan && mouseY<yCyan+heightCyan && ExitConfirmation==false) DrawingColor=Cyan;
+  if (mouseX>xPurple && mouseX<xPurple+widthPurple && mouseY>yPurple && mouseY<yPurple+heightPurple && ExitConfirmation==false) DrawingColor=Purple;
+  if (mouseX>xBrown && mouseX<xBrown+widthBrown && mouseY>yBrown && mouseY<yBrown+heightBrown && ExitConfirmation==false) DrawingColor=Brown;
+  if (mouseX>xMagenta && mouseX<xMagenta+widthMagenta && mouseY>yMagenta && mouseY<yMagenta+heightMagenta && ExitConfirmation==false) DrawingColor=Magenta;
+  if (mouseX>xOrange && mouseX<xOrange+widthOrange && mouseY>yOrange && mouseY<yOrange+heightOrange && ExitConfirmation==false) DrawingColor=Orange;
+  if (mouseX>xNavy && mouseX<xNavy+widthNavy && mouseY>yNavy && mouseY<yNavy+heightNavy && ExitConfirmation==false) DrawingColor=Navy;
+  if (mouseX>xGray && mouseX<xGray+widthGray && mouseY>yGray && mouseY<yGray+heightGray && ExitConfirmation==false) DrawingColor=Gray;
+  if (mouseX>xBlack && mouseX<xBlack+widthBlack && mouseY>yBlack && mouseY<yBlack+heightBlack && ExitConfirmation==false) DrawingColor=Black;
+  if (mouseX>xErase && mouseX<xErase+widthErase && mouseY>yErase && mouseY<yErase+heightErase && ExitConfirmation==false) DrawingColor=ErasingColor;
+  //
   if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue && ExitConfirmation==false) DrawingColor=Blue;
   if (mouseX>xGreen && mouseX<xGreen+widthGreen && mouseY>yGreen && mouseY<yGreen+heightGreen && ExitConfirmation==false) DrawingColor=Green;
   if (mouseX>xRed && mouseX<xRed+widthRed && mouseY>yRed && mouseY<yRed+heightRed && ExitConfirmation==false) DrawingColor=Red;
