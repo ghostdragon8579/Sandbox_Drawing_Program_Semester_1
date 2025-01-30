@@ -8,11 +8,13 @@ void ExitConfirmation () {
   color hoverOverColor=ResetDefaultInk;
   if (mouseX>xConfirmationYes && mouseX<xConfirmationYes+widthConfirmationYes && mouseY>yConfirmationYes && mouseY<yConfirmationYes+heightConfirmationYes) {
     hoverOverColor = color(Green, 128);
+    stroke(hoverOverColor);
     fill(hoverOverColor);
     rect(xConfirmationYes, yConfirmationYes, widthConfirmationYes, heightConfirmationYes);
     fill(ResetDefaultInk);
   } else if (mouseX>xConfirmationNo && mouseX<xConfirmationNo+widthConfirmationNo && mouseY>yConfirmationNo && mouseY<yConfirmationNo+heightConfirmationNo) {
     hoverOverColor = color(Red, 128);
+    stroke(hoverOverColor);
     fill(hoverOverColor);
     rect(xConfirmationNo, yConfirmationNo, widthConfirmationNo, heightConfirmationNo);
     fill(ResetDefaultInk);
