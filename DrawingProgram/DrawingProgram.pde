@@ -89,6 +89,7 @@ float xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle;
 float xShapeSelection, yShapeSelection, widthShapeSelection, heightShapeSelection;
 float xTriangle1, yTriangle1, xTriangle2, yTriangle2, xTriangle3, yTriangle3;
 float xCircle, yCircle, CircleDimensions;
+float xRectangle, yRectangle, widthRectangle, heightRectangle;
 float DrawVariable1, DrawVariable2, DrawVariable3;
 float EraseVariable1, EraseVariable2;
 float ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight;
@@ -178,9 +179,11 @@ void setup() {
   //
   xShapeTitle = appWidth*1/12; yShapeTitle = yWidthTitle; widthShapeTitle = widthWidthTitle; heightShapeTitle = heightWidthTitle;
   xShapeSelection = xShapeTitle; yShapeSelection = yWidthSelection; widthShapeSelection = widthWidthSelection; heightShapeSelection = heightWidthSelection;
-  xTriangle1 = appWidth*3/24; yTriangle1 = appHeight*1/2+heightShapeTitle*1.4; 
+  xTriangle1 = appWidth*3/24; yTriangle1 = appHeight*1/2+heightShapeTitle*2; 
   xTriangle2 = appWidth*9/96; yTriangle2 = yTriangle1+appWidth*1/24;
   xTriangle3 = appWidth*15/96; yTriangle3 = yTriangle2;
+  xCircle = xTriangle1; yCircle = appHeight*23/32; CircleDimensions = appHeight*1/14;
+  xRectangle = appWidth*5/48; yRectangle = appHeight*31/64; widthRectangle = appHeight*1/14; heightRectangle = widthRectangle;
   //
   xNoDrawZone1 = appWidth*0; yNoDrawZone1 = yRectBackground; widthNoDrawZone1 = appWidth*1/6; heightNoDrawZone1 = heightRectBackground;
   xNoDrawZone2 = appWidth*5/6; yNoDrawZone2 = yRectBackground; widthNoDrawZone2 = widthNoDrawZone1; heightNoDrawZone2 = heightRectBackground;
@@ -288,8 +291,9 @@ void draw() {
   rect(xDrawSize5, yDrawSize5, widthDrawSize5, heightDrawSize5);
   rect(xDrawSize6, yDrawSize6, widthDrawSize6, heightDrawSize6);
   rect(xDrawSize7, yDrawSize7, widthDrawSize7, heightDrawSize7);
-  //rect();
+  rect(xRectangle, yRectangle, widthRectangle, heightRectangle);
   triangle(xTriangle1, yTriangle1, xTriangle2, yTriangle2, xTriangle3, yTriangle3);
+  circle(xCircle, yCircle, CircleDimensions);
   circle(WidthIndicator1, WidthIndicator2, DrawVariable3);
   fill(DrawingColor);
   circle(ColorIndicator1, ColorIndicator2, ColorIndicator3);
