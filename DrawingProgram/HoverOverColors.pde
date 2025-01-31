@@ -54,6 +54,18 @@ void HoverOverColor () {
     rect(xDrawSize7, yDrawSize7, widthDrawSize7, heightDrawSize7);
     fill(ResetDefaultInk);
   }
+  if (mouseX>xRectangle && mouseX<xRectangle+widthRectangle && mouseY>yRectangle && mouseY<yRectangle+heightRectangle) {
+    stroke(hoverOverColor);
+    fill(hoverOverColor);
+    rect(xRectangle, yRectangle, widthRectangle, heightRectangle);
+    fill(ResetDefaultInk);
+  }
+    if (mouseX>xCircle-CircleDimensions*1/2 && mouseX<xCircle+CircleDimensions*1/2 && mouseY>yCircle-CircleDimensions*1/2 && mouseY<yCircle+CircleDimensions*1/2) {
+    stroke(hoverOverColor);
+    fill(hoverOverColor);
+    circle(xCircle, yCircle, CircleDimensions);
+    fill(ResetDefaultInk);
+  }
   if (mouseX>xBlue && mouseX<xBlue+widthBlue && mouseY>yBlue && mouseY<yBlue+heightBlue) {
     stroke(hoverOverColor);
     fill(hoverOverColor);
