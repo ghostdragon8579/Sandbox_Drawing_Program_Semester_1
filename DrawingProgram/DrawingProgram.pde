@@ -88,6 +88,7 @@ float xDrawSize7, yDrawSize7, widthDrawSize7, heightDrawSize7;
 float xShapeTitle, yShapeTitle, widthShapeTitle, heightShapeTitle;
 float xShapeSelection, yShapeSelection, widthShapeSelection, heightShapeSelection;
 float xTriangle1, yTriangle1, xTriangle2, yTriangle2, xTriangle3, yTriangle3;
+float xCircle, yCircle, CircleDimensions;
 float DrawVariable1, DrawVariable2, DrawVariable3;
 float EraseVariable1, EraseVariable2;
 float ColorTextx, ColorTexty, ColorTextwidth, ColorTextheight;
