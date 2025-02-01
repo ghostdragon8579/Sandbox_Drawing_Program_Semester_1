@@ -11,7 +11,6 @@ String Selection = "Selected Color";
 String Selection2 = "Selected Width";
 String Yes = "Yes";
 String No = "No";
-String Erase = "Erase all";
 String Question = "Are you sure you would like to quit?";
 String EraseQuestion = "Are you sure you want to erase all?";
 color DarkGreen=#02B703;
@@ -349,6 +348,11 @@ void draw() {
 //
 void keyPressed() {
   //
+  if(key == 'e' || key == 'E' && ExitConfirmation==false){
+    fill(ResetDefaultInk);
+    noStroke();
+    rect(xRectBackground, yRectBackground, widthRectBackground, heightRectBackground);
+  }
   //
 } //End keyPressed
 //

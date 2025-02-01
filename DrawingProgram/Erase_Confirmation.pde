@@ -18,13 +18,6 @@ void EraseConfirmation () {
     fill(ResetDefaultInk);
   }
   //
-  fill(DarkGreen);
-  textAlign(CENTER, CENTER); 
-  size = 30;
-  textFont(GeneralFont, size); 
-  text(Erase, xEraseConfirmationYes, yEraseConfirmationYes, widthEraseConfirmationYes, heightEraseConfirmationYes);
-  fill(ResetDefaultInk);
-  //
   fill(DarkRed);
   textAlign(CENTER, CENTER); 
   size = 30;
