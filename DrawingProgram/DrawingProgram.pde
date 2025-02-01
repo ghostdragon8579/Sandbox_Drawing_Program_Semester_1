@@ -356,6 +356,10 @@ void keyPressed() {
   //
 } //End keyPressed
 //
+void keyReleased() {
+  //
+} //End keyReleased
+//
 void mousePressed() {
   //
   if (mouseX>xRectQuit && mouseX<xRectQuit+widthRectQuit && mouseY>yRectQuit && mouseY<yRectQuit+heightRectQuit) ExitConfirmation=true;
