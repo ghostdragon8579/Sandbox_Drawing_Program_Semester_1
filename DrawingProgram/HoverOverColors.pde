@@ -61,7 +61,7 @@ void HoverOverColor () {
     fill(ResetDefaultInk);
   }
   /*
-    if (mouseX>xTriangle2 && mouseX<xTriangle3+xTriangle2 && mouseY>yTriangle2-yTriangle1 && mouseY>yTriangle3-yTriangle1 && mouseY<yTriangle1) {
+    if (mouseX>xTriangleHoverOver && mouseX<xTriangleHoverOver+widthTriangleHoverOver && mouseY>yTriangleHoverOver && mouseY<yTriangleHoverOver+heightTriangleHoverOver) {
     stroke(hoverOverColor);
     fill(hoverOverColor);
     triangle(xTriangle1, yTriangle1, xTriangle2, yTriangle2, xTriangle3, yTriangle3);
